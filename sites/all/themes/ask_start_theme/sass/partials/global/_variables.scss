@@ -1,0 +1,37 @@
+////////////////////////
+// Variables are defined here.
+////////////////////////
+
+/* *********** */
+/* BREAKPOINTS */
+/* *********** */
+$desktop: 768px;
+
+/* *********** */
+/* SASS / SUSY */
+/* *********** */
+$base-font-size: 16px;
+$base-line-height: 24px;
+$rhythm-unit: 'rem';
+
+$susy: (
+  columns: 12,
+  container: 1170px,
+  gutters: 30px/67px,
+  gutter-position: split,
+);
+
+// General.
+
+// Buttons
+
+// Texts related.
+
+// Ratings: Stars, Thumbs, etc.
+
+// Tabs.
+
+// Animations.
+$easeOutExpo   : cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$easeInExpo    : cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$easeInOutExpo : cubic-bezier(1.000, 0.000, 0.000, 1.000);

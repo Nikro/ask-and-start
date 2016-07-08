@@ -1,0 +1,160 @@
+////////////////////////
+// Fonts Partials
+////////////////////////
+@import "base";
+
+@font-face {
+  font-family: 'icomoon';
+  src:    font-url('fonts/icomoon.eot?cqd9xk');
+  src:    font-url('fonts/icomoon.eot?cqd9xk#iefix') format('embedded-opentype'),
+  font-url('fonts/icomoon.ttf?cqd9xk') format('truetype'),
+  font-url('fonts/icomoon.woff?cqd9xk') format('woff'),
+  font-url('fonts/icomoon.svg?cqd9xk#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$icons: (
+  ac_unit: "\e900",
+  schedule: "\e901",
+  accessible: "\e902",
+  account_balance: "\e903",
+  account_box: "\e904",
+  account_circle: "\e905",
+  add: "\e906",
+  add_a_photo: "\e907",
+  add_box: "\e908",
+  add_circle: "\e909",
+  control_point: "\e90a",
+  add_location: "\e90b",
+  queue: "\e90c",
+  add_to_queue: "\e90d",
+  adjust: "\e90e",
+  airport_shuttle: "\e90f",
+  announcement: "\e910",
+  apps: "\e911",
+  arrow_back: "\e912",
+  arrow_downward: "\e913",
+  arrow_forward: "\e914",
+  arrow_upward: "\e915",
+  assignment_ind: "\e916",
+  assignment_turned_in: "\e917",
+  attach_file: "\e918",
+  autorenew: "\e919",
+  beenhere: "\e91a",
+  turned_in: "\e91b",
+  turned_in_not: "\e91c",
+  burst_mode: "\e91d",
+  phone: "\e91e",
+  photo_camera: "\e91f",
+  card_membership: "\e920",
+  card_travel: "\e921",
+  chat: "\e922",
+  chat_bubble: "\e923",
+  chat_bubble_outline: "\e924",
+  check: "\e925",
+  check_box_outline_blank: "\e926",
+  navigate_before: "\e927",
+  navigate_next: "\e928",
+  child_friendly: "\e929",
+  close: "\e92a",
+  photo_library: "\e92b",
+  collections_bookmark: "\e92c",
+  contacts: "\e92d",
+  mode_edit: "\e92e",
+  delete: "\e92f",
+  delete_forever: "\e930",
+  do_not_disturb_alt: "\e931",
+  done_all: "\e932",
+  error_outline: "\e933",
+  favorite: "\e934",
+  favorite_border: "\e935",
+  fiber_new: "\e05e",
+  free_breakfast: "\e936",
+  star: "\e937",
+  people: "\e938",
+  group_add: "\e939",
+  high_quality: "\e93a",
+  info_outline: "\e93b",
+  tag_faces: "\e93c",
+  link: "\e93d",
+  keyboard_arrow_down: "\e93e",
+  keyboard_arrow_up: "\e93f",
+  language: "\e940",
+  local_hospital: "\e941",
+  room: "\e942",
+  mail_outline: "\e943",
+  map: "\e944",
+  menu: "\e5d2",
+  mood_bad: "\e945",
+  people_outline: "\e946",
+  person: "\e947",
+  person_add: "\e948",
+  pin_drop: "\e949",
+  search: "\e94a",
+  security: "\e94b",
+  sentiment_neutral: "\e94c",
+  settings: "\e94d",
+  star_border: "\e94e",
+  star_half: "\e94f",
+  thumb_down: "\e950",
+  thumb_up: "\e951",
+  verified_user: "\e952",
+  google_plus2: "\e953",
+  facebook2: "\e954",
+  weather_cloudy: "\e955",
+  weather_lightning: "\e956",
+  weather_partlycloudy: "\e957",
+  weather_pouring: "\e958",
+  weather_rainy: "\e959",
+  weather_snowy: "\e95a",
+  weather_sunny: "\e95b",
+);
+
+// For adding font icons to elements using CSS pseudo-elements
+// http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+@mixin icon($position: before, $icon: false, $styles: true) {
+  @if $position == both {
+    $position: 'before, &:after';
+  }
+  // Either a :before or :after pseudo-element, or both, defaulting to :before
+  &:#{$position} {
+    @if $icon {
+      // A particular icon has been specified
+      content: "#{map-get($icons, $icon)}";
+    }
+    @if $styles {
+      // Supportive icon styles required
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-family: 'icomoon';
+    }
+    // Include any extra rules supplied for the pseudo-element
+    @content;
+  }
+}

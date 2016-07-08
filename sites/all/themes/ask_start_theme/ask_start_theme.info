@@ -1,0 +1,73 @@
+name = Start Moldova (Ask and Start) Subtheme
+description =  Ask and Start Aurora-based Subtheme. This is bower-based, gulp-based, whatever-fancy-thing based theme.
+core = 7.x
+base theme = aurora
+
+; ========================================
+; Regions
+; ========================================
+
+regions[header]       = 'Header'
+regions[main_prefix]  = 'Main Region Prefix'
+regions[content]      = 'Main Region'
+regions[main_suffix]  = 'Main Region Suffix'
+regions[footer]       = 'Footer'
+
+; ========================================
+; Breakpoints
+; ========================================
+breakpoints[desktop] = (min-width: 768px)
+multipliers[desktop][] = 1.5x
+multipliers[desktop][] = 2x
+
+breakpoints[tablet] = (min-width: 480px)
+multipliers[tablet][] = 1.5x
+multipliers[tablet][] = 2x
+
+breakpoints[mobile] = (min-width: 0)
+multipliers[mobile][] = 1.5x
+multipliers[mobile][] = 2x
+
+; ========================================
+; Fonts (@font-your-face)
+; ========================================
+fonts[google_fonts_api][] = "Roboto&subset=cyrillic#100"
+fonts[google_fonts_api][] = "Roboto&subset=latin#100"
+fonts[google_fonts_api][] = "Roboto&subset=cyrillic#100italic"
+fonts[google_fonts_api][] = "Roboto&subset=latin#100italic"
+fonts[google_fonts_api][] = "Roboto&subset=cyrillic#300"
+fonts[google_fonts_api][] = "Roboto&subset=latin#300"
+fonts[google_fonts_api][] = "Roboto&subset=cyrillic#300italic"
+fonts[google_fonts_api][] = "Roboto&subset=latin#300italic"
+fonts[google_fonts_api][] = "Roboto&subset=cyrillic#500"
+fonts[google_fonts_api][] = "Roboto&subset=latin#500"
+fonts[google_fonts_api][] = "Roboto&subset=cyrillic#500italic"
+fonts[google_fonts_api][] = "Roboto&subset=latin#500italic"
+fonts[google_fonts_api][] = "Roboto&subset=cyrillic#700"
+fonts[google_fonts_api][] = "Roboto&subset=latin#700"
+fonts[google_fonts_api][] = "Roboto&subset=cyrillic#700italic"
+fonts[google_fonts_api][] = "Roboto&subset=latin#700italic"
+fonts[google_fonts_api][] = "Roboto&subset=cyrillic#900"
+fonts[google_fonts_api][] = "Roboto&subset=latin#900"
+fonts[google_fonts_api][] = "Roboto&subset=cyrillic#900italic"
+
+; ========================================
+; Styles
+; ========================================
+stylesheets[all][] = 'css/normalize.css'
+stylesheets[all][] = 'css/style.css'
+stylesheets[print][] = 'css/print.css'
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = 'js/script.js'
+
+; ========================================
+; Modernizr
+; ========================================
+modernizr[tests][] = css_boxsizing
+
+; Panels layouts. You can place multiple layouts under the "layouts" folder.
+plugins[panels][layouts] = layouts
+

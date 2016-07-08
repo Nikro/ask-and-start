@@ -1,0 +1,34 @@
+.page-admin #panels-dnd-main .top-region-wrapper {
+    margin: 0 0 10px 0;
+}
+.page-admin #panels-dnd-main .stats-line-wrapper {
+    margin: 0 0 10px 0;
+}
+.page-admin #panels-dnd-main .home-content-wrapper {
+    white-space: nowrap;
+}
+.page-admin #panels-dnd-main .home-content-wrapper .activity-nodes-wrapper {
+    display: inline-block;
+    width: 59.5%;
+    margin: 0 0.5% 10px 0;
+    vertical-align: top;
+}
+.page-admin #panels-dnd-main .home-content-wrapper .activity-comments-wrapper {
+    display: inline-block;
+    width: 39.5%;
+    margin: 0 0 10px 0.5%;
+    vertical-align: top;
+}
+.page-admin #panels-dnd-main .bottom-wrapper {
+    white-space: nowrap;
+}
+.page-admin #panels-dnd-main .activity-nodes {
+    margin: 0 0 10px 0;
+}
+.page-admin #panels-dnd-main .bottom-wrapper .bottom-left,
+.page-admin #panels-dnd-main .bottom-wrapper .bottom-right {
+    display: inline-block;
+    width: 49.5%;
+    margin: 0 0.5% 10px 0;
+    vertical-align: top;
+}
