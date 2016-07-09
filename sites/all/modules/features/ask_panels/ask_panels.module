@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Ask Panels feature.
+ */
+
+include_once 'ask_panels.features.inc';

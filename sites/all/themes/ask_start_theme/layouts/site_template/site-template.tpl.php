@@ -9,21 +9,16 @@
 <div class="panel-layout <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print 'id="' . $css_id . '"'; } ?>>
   <div class="top-wrapper">
     <div class="top">
-      <section class="top__left">
-        <?php print $content['top_left']; ?>
-      </section>
-      <section class="top__right">
-        <?php print $content['top_right']; ?>
-      </section>
+      <?php print $content['top']; ?>
     </div>
   </div>
   <div class="branding-navigation-wrapper">
     <div class="branding-navigation">
-      <section class="branding-navigation__branding">
-        <?php print $content['branding']; ?>
+      <section class="branding-navigation__branding_left">
+        <?php print $content['branding_left']; ?>
       </section>
-      <section class="branding-navigation__navigation">
-        <?php print $content['navigation']; ?>
+      <section class="branding-navigation__branding_right">
+        <?php print $content['branding_right']; ?>
       </section>
     </div>
   </div>

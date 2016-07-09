@@ -1,26 +1,16 @@
 .page-admin #panels-dnd-main .top-wrapper {
     white-space: nowrap;
 }
-.page-admin #panels-dnd-main .top-wrapper .top__left, .page-admin #panels-dnd-main .top-wrapper .top__right {
-    display: inline-block;
-    width: 49.5%;
-    margin: 0 0.5% 10px 0;
-}
-.page-admin #panels-dnd-main .top-wrapper .top__right {
-    margin: 0 0 10px 0.5%;
+.page-admin #panels-dnd-main .top-wrapper {
+    margin: 0 0 10px 0;
 }
 .page-admin #panels-dnd-main .branding-navigation-wrapper {
     white-space: nowrap;
 }
-.page-admin #panels-dnd-main .branding-navigation-wrapper .branding-navigation__branding {
+.page-admin #panels-dnd-main .branding-navigation-wrapper .branding-navigation__branding_left, .page-admin #panels-dnd-main .branding-navigation-wrapper .branding-navigation__branding_right {
     display: inline-block;
-    width: 19.5%;
+    width: 49.5%;
     margin: 0 0.5% 10px 0;
-}
-.page-admin #panels-dnd-main .branding-navigation-wrapper .branding-navigation__navigation {
-    display: inline-block;
-    width: 79.5%;
-    margin: 0 0 10px 0.5%;
 }
 .page-admin #panels-dnd-main main {
     width: 100%;
