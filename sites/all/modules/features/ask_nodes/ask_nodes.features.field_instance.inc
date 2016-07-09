@@ -1244,13 +1244,20 @@ function ask_nodes_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'select2widget',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'select2widgetajax' => array(
+          'allow_new' => 1,
+          'match_limit' => 10,
+          'match_operator' => 'CONTAINS',
+          'min_char' => 1,
+          'placeholder' => 'Search',
+          'separator' => '|',
+          'set_level' => 0,
+        ),
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'select2widgetajax',
       'weight' => 13,
     ),
   );
