@@ -134,6 +134,7 @@ function ask_views_views_default_views() {
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['group'] = 1;
   $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Question Search';
@@ -148,10 +149,45 @@ function ask_views_views_default_views() {
     'body:value' => 'body:value',
     'title' => 'title',
   );
+  /* Filter criterion: Indexed Node: Location */
+  $handler->display->display_options['filters']['field_q_location']['id'] = 'field_q_location';
+  $handler->display->display_options['filters']['field_q_location']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['field_q_location']['field'] = 'field_q_location';
+  $handler->display->display_options['filters']['field_q_location']['value'] = array();
+  $handler->display->display_options['filters']['field_q_location']['group'] = 1;
+  $handler->display->display_options['filters']['field_q_location']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_q_location']['expose']['operator_id'] = 'field_q_location_op';
+  $handler->display->display_options['filters']['field_q_location']['expose']['label'] = 'Location';
+  $handler->display->display_options['filters']['field_q_location']['expose']['operator'] = 'field_q_location_op';
+  $handler->display->display_options['filters']['field_q_location']['expose']['identifier'] = 'field_q_location';
+  $handler->display->display_options['filters']['field_q_location']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_q_location']['expose']['reduce'] = 0;
+  /* Filter criterion: Indexed Node: Industry */
+  $handler->display->display_options['filters']['field_q_industry']['id'] = 'field_q_industry';
+  $handler->display->display_options['filters']['field_q_industry']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['field_q_industry']['field'] = 'field_q_industry';
+  $handler->display->display_options['filters']['field_q_industry']['value'] = array();
+  $handler->display->display_options['filters']['field_q_industry']['group'] = 1;
+  $handler->display->display_options['filters']['field_q_industry']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_q_industry']['expose']['operator_id'] = 'field_q_industry_op';
+  $handler->display->display_options['filters']['field_q_industry']['expose']['label'] = 'Industry';
+  $handler->display->display_options['filters']['field_q_industry']['expose']['operator'] = 'field_q_industry_op';
+  $handler->display->display_options['filters']['field_q_industry']['expose']['identifier'] = 'field_q_industry';
+  $handler->display->display_options['filters']['field_q_industry']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_q_industry']['expose']['reduce'] = 0;
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'search';
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_search');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['search'] = $view;
 
   return $export;
