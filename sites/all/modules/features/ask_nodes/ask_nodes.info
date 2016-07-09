@@ -13,6 +13,7 @@ dependencies[] = link
 dependencies[] = list
 dependencies[] = media
 dependencies[] = select2widget
+dependencies[] = shs
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text

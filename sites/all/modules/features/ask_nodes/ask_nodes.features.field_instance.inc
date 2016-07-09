@@ -866,6 +866,7 @@ function ask_nodes_field_default_field_instances() {
   // Exported field_instance: 'node-question-field_q_official_party'.
   $field_instances['node-question-field_q_official_party'] = array(
     'bundle' => 'question',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Officially party that is responsible for answering this question.',
     'display' => array(
@@ -892,9 +893,16 @@ function ask_nodes_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'select2widget',
-      'settings' => array(),
-      'type' => 'select2widget',
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 1,
+          'force_deepest' => 1,
+          'node_count' => 1,
+        ),
+      ),
+      'type' => 'taxonomy_shs',
       'weight' => 11,
     ),
   );
