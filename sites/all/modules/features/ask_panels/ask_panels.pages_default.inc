@@ -13,6 +13,135 @@ function ask_panels_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'node_view__panel_context_2957236c-3f2d-46a9-8573-d04e7ec674db';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Question',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => '',
+    'access' => array(
+      'logic' => 'and',
+      'plugins' => array(
+        0 => array(
+          'name' => 'entity_bundle:node',
+          'settings' => array(
+            'type' => array(
+              'question' => 'question',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'node-layout';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'content' => NULL,
+      'sidebar' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'bc21db28-db81-4b9f-98e4-c2d7028b2bbb';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-e90e7e64-db11-4707-b19d-aa544cabe554';
+    $pane->panel = 'content';
+    $pane->type = 'node_content';
+    $pane->subtype = 'node_content';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'links' => 0,
+      'no_extras' => 1,
+      'override_title' => 0,
+      'override_title_text' => '',
+      'identifier' => '',
+      'link' => 0,
+      'leave_node_title' => 0,
+      'build_mode' => 'full',
+      'context' => 'argument_entity_id:node_1',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'e90e7e64-db11-4707-b19d-aa544cabe554';
+    $display->content['new-e90e7e64-db11-4707-b19d-aa544cabe554'] = $pane;
+    $display->panels['content'][0] = 'new-e90e7e64-db11-4707-b19d-aa544cabe554';
+    $pane = new stdClass();
+    $pane->pid = 'new-76142152-661c-4e78-ad71-923a30a46891';
+    $pane->panel = 'content';
+    $pane->type = 'node_comment_form';
+    $pane->subtype = 'node_comment_form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'anon_links' => 1,
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '<none>',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '76142152-661c-4e78-ad71-923a30a46891';
+    $display->content['new-76142152-661c-4e78-ad71-923a30a46891'] = $pane;
+    $display->panels['content'][1] = 'new-76142152-661c-4e78-ad71-923a30a46891';
+    $pane = new stdClass();
+    $pane->pid = 'new-5750022e-3212-4ce5-9cd4-b86c8bec0559';
+    $pane->panel = 'content';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'question_comments-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '5750022e-3212-4ce5-9cd4-b86c8bec0559';
+    $display->content['new-5750022e-3212-4ce5-9cd4-b86c8bec0559'] = $pane;
+    $display->panels['content'][2] = 'new-5750022e-3212-4ce5-9cd4-b86c8bec0559';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__panel_context_2957236c-3f2d-46a9-8573-d04e7ec674db'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'site_template__panel_context_9a225a5d-a2cb-43e6-a8b1-3a59a879104d';
   $handler->task = 'site_template';
   $handler->subtask = '';

@@ -154,7 +154,7 @@ function ask_nodes_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_question';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_preview_question'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -189,7 +189,7 @@ function ask_nodes_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_question';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['comment_subject_field_question'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -205,6 +205,19 @@ function ask_nodes_strongarm() {
   $strongarm->name = 'comment_tutorials';
   $strongarm->value = '2';
   $export['comment_tutorials'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_exp_useful_links';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_field_collection_item__field_exp_useful_links'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

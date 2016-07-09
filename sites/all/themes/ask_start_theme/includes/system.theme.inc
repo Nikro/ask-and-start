@@ -90,6 +90,7 @@ function ask_start_theme_preprocess_node(&$vars) {
 function ask_start_theme_preprocess_comment(&$vars) {
   // Extract the important stuff.
   $comment = $vars['comment'];
+  $vars['timestamp'] = format_interval((time() - $comment->changed) , 2) . t(' ago');
   $comment_emw = entity_metadata_wrapper('comment', $comment);
 
   // Prepare the user pane.

@@ -1,0 +1,14 @@
+name = Ask Ratings
+description = Rating systems functionality.
+core = 7.x
+package = Ask Generic
+version = 7.x-1.0
+dependencies[] = comment
+dependencies[] = ctools
+dependencies[] = flag
+dependencies[] = rate
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[flag][] = reported_comments
+features[variable][] = rate_widgets
