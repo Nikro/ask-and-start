@@ -417,6 +417,270 @@ function ask_nodes_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-experience_page-body'.
+  $field_instances['node-experience_page-body'] = array(
+    'bundle' => 'experience_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'advanced_editor' => 'advanced_editor',
+          'editor' => 'editor',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'advanced_editor' => array(
+              'weight' => -8,
+            ),
+            'editor' => array(
+              'weight' => -9,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'display_summary' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_label_summary' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_summary' => '',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-experience_page-field_exp_attachments'.
+  $field_instances['node-experience_page-field_exp_attachments'] = array(
+    'bundle' => 'experience_page',
+    'deleted' => 0,
+    'description' => 'If you want to upload any of the documents related to this experience, please upload\'em here.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_exp_attachments',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'attachments_exp',
+      'file_extensions' => 'pdf doc docx xls xlsx ppt pptx avi mpg mpeg mp3',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 'audio',
+          'document' => 'document',
+          'image' => 'image',
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-experience_page-field_exp_location'.
+  $field_instances['node-experience_page-field_exp_location'] = array(
+    'bundle' => 'experience_page',
+    'deleted' => 0,
+    'description' => 'If this experience is relevant to certain location, please specify to which location.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_exp_location',
+    'label' => 'Location',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'select2widget',
+      'settings' => array(
+        'select2widgetajax' => array(
+          'allow_new' => 1,
+          'match_limit' => 10,
+          'match_operator' => 'CONTAINS',
+          'min_char' => 1,
+          'placeholder' => 'Search',
+          'separator' => '|',
+          'set_level' => 0,
+        ),
+      ),
+      'type' => 'select2widgetajax',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-experience_page-field_exp_tags'.
+  $field_instances['node-experience_page-field_exp_tags'] = array(
+    'bundle' => 'experience_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_exp_tags',
+    'label' => 'Tags',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'select2widget',
+      'settings' => array(
+        'select2widgetajax' => array(
+          'allow_new' => 1,
+          'match_limit' => 10,
+          'match_operator' => 'CONTAINS',
+          'min_char' => 1,
+          'placeholder' => 'Search',
+          'separator' => '|',
+          'set_level' => 0,
+        ),
+      ),
+      'type' => 'select2widgetajax',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-experience_page-field_exp_useful_links'.
+  $field_instances['node-experience_page-field_exp_useful_links'] = array(
+    'bundle' => 'experience_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If there are any useful links you\'d like to share, use this field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_exp_useful_links',
+    'label' => 'Useful Links',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-page-body'.
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
@@ -810,13 +1074,12 @@ function ask_nodes_field_default_field_instances() {
       'settings' => array(
         'select2widgetajax' => array(
           'allow_new' => 0,
-          'delay' => 100,
+          'match_limit' => 10,
           'match_operator' => 'STARTS_WITH',
           'min_char' => 1,
           'placeholder' => 'Search',
           'separator' => '|',
           'set_level' => 0,
-          'view_mode' => 'default',
         ),
       ),
       'type' => 'select2widgetajax',
@@ -1088,9 +1351,12 @@ function ask_nodes_field_default_field_instances() {
   t('Description');
   t('FSEA Progress');
   t('Governmental official progress.');
+  t('If there are any useful links you\'d like to share, use this field.');
+  t('If this experience is relevant to certain location, please specify to which location.');
   t('If you want to attach any files, scans, forms, feel free to do so.');
   t('If you want to share any useful links, please use this field.');
   t('If you want to tag your question, in example "Starting a Company", use this field.');
+  t('If you want to upload any of the documents related to this experience, please upload\'em here.');
   t('Industries that are involved into this question.');
   t('Industry');
   t('Is this question location based? If you think that this question is strictly related to a location, check the box.');

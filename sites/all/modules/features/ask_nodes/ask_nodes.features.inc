@@ -21,6 +21,14 @@ function ask_nodes_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function ask_nodes_node_info() {
   $items = array(
+    'experience_page' => array(
+      'name' => t('Experience Page'),
+      'base' => 'node_content',
+      'description' => t('Shared experience page content-type.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Page'),
       'base' => 'node_content',
