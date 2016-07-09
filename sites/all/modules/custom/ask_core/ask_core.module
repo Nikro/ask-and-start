@@ -33,7 +33,7 @@ function ask_core_form_views_exposed_form_alter(&$form, $form_state) {
        ),
      ),
    );
-   if (!in_array('Moderator', $user->roles) ) {
+   if (!in_array('Moderator', $user->roles) && $user->uid != 1) {
      $form['field_fsea_progress']['#access'] = FALSE;
      $form['field_official_progress']['#access'] = FALSE;
    }
