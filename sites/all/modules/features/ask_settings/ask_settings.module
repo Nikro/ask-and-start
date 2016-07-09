@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Ask Settings feature.
  */
+
+include_once 'ask_settings.features.inc';
