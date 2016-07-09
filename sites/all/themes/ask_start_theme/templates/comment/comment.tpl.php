@@ -61,7 +61,7 @@
 ?>
 <article class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="author-pane">
-    <?php if ($user_pane['field_image']): ?>
+    <?php if (!empty($user_pane['field_image'])): ?>
       <div class="user-picture">
         <?php print render($user_pane['field_image']); ?>
       </div>
