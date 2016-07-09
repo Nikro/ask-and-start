@@ -104,15 +104,15 @@ function ask_start_theme_preprocess_comment(&$vars) {
   $vars['content']['field_contrib_images']['#weight'] = 20;
 
   // Identify the wrappers (indentation).
-  $depth = $comment->depth;
-  $vars['indent_prefix'] = FALSE;
-  $vars['indent_suffix'] = FALSE;
-  if ($depth) {
-    $prefix = str_repeat('<div class="indented">', $depth);
-    $vars['indent_prefix']  = $prefix;
-    $suffix = str_repeat('</div>', $depth);
-    $vars['indent_suffix'] = $suffix;
-  }
+//  $depth = $comment->depth;
+//  $vars['indent_prefix'] = FALSE;
+//  $vars['indent_suffix'] = FALSE;
+//  if ($depth) {
+//    $prefix = str_repeat('<div class="indented">', $depth);
+//    $vars['indent_prefix']  = $prefix;
+//    $suffix = str_repeat('</div>', $depth);
+//    $vars['indent_suffix'] = $suffix;
+//  }
 }
 
 /**
