@@ -143,14 +143,13 @@ function ask_settings_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'simplify_nodes_global';
   $strongarm->value = array(
-    0 => 'author',
-    1 => 'format',
-    2 => 'options',
-    3 => 'revision',
-    4 => 'comment',
-    5 => 'menu',
-    6 => 'path',
-    7 => 'metatag',
+    0 => 'format',
+    1 => 'options',
+    2 => 'revision',
+    3 => 'comment',
+    4 => 'menu',
+    5 => 'path',
+    6 => 'metatag',
   );
   $export['simplify_nodes_global'] = $strongarm;
 
