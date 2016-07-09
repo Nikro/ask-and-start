@@ -726,17 +726,15 @@ function ask_nodes_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'shs',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
         'shs' => array(
-          'create_new_levels' => FALSE,
-          'create_new_terms' => FALSE,
-          'force_deepest' => FALSE,
-          'node_count' => FALSE,
+          'create_new_levels' => 1,
+          'create_new_terms' => 1,
+          'force_deepest' => 0,
+          'node_count' => 1,
         ),
-        'size' => 60,
       ),
       'type' => 'taxonomy_shs',
       'weight' => 12,
@@ -902,9 +900,9 @@ function ask_nodes_field_default_field_instances() {
       'module' => 'shs',
       'settings' => array(
         'shs' => array(
-          'create_new_levels' => 0,
+          'create_new_levels' => 1,
           'create_new_terms' => 1,
-          'force_deepest' => 1,
+          'force_deepest' => 0,
           'node_count' => 1,
         ),
       ),
