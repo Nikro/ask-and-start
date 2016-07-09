@@ -1,0 +1,6 @@
+name = Ask Core
+description = "Contains all of the core functionality, helper functions, etc."
+package = ASK (Custom)
+core = 7.x
+
+dependencies[] = ctools
