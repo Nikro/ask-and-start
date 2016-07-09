@@ -4,6 +4,6 @@
  * Implements hook_form_alter().
  */
 function ask_core_form_alter(&$form, &$form_state, $form_id) {
-  dsm($form_id);
-  theme_date_time_ago();
+//  dsm($form_id);
+//  theme_date_time_ago();
 }
