@@ -129,5 +129,55 @@ function ask_settings_strongarm() {
   $strongarm->value = 'image';
   $export['recaptcha_type'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplify_comments_global';
+  $strongarm->value = array(
+    0 => 'format',
+  );
+  $export['simplify_comments_global'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplify_nodes_global';
+  $strongarm->value = array(
+    0 => 'author',
+    1 => 'format',
+    2 => 'options',
+    3 => 'revision',
+    4 => 'comment',
+    5 => 'menu',
+    6 => 'path',
+    7 => 'metatag',
+  );
+  $export['simplify_nodes_global'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplify_taxonomy_global';
+  $strongarm->value = array();
+  $export['simplify_taxonomy_global'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplify_user1';
+  $strongarm->value = 1;
+  $export['simplify_user1'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplify_users_global';
+  $strongarm->value = array(
+    0 => 'format',
+    1 => 'contact',
+    2 => 'metatag',
+  );
+  $export['simplify_users_global'] = $strongarm;
+
   return $export;
 }

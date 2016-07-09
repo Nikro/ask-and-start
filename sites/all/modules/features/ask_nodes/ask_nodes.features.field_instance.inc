@@ -533,7 +533,7 @@ function ask_nodes_field_default_field_instances() {
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_ul_link',
     'label' => 'Link',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
