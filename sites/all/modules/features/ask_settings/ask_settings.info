@@ -1,0 +1,17 @@
+name = Ask Settings
+description = All the settings go here.
+core = 7.x
+package = Ask Generic
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = media_wysiwyg
+dependencies[] = picture
+features[ckeditor_profile][] = CKEditor Global Profile
+features[ckeditor_profile][] = Full
+features[ckeditor_profile][] = Standard
+features[features_api][] = api:2
+features[filter][] = advanced_editor
+features[filter][] = editor
+features[filter][] = plain_text
+features_exclude[dependencies][ckeditor] = ckeditor

@@ -1,0 +1,8 @@
+name = Ask User
+description = All the user sweets go here.
+core = 7.x
+package = Ask Entities
+version = 7.x-1.0
+dependencies[] = features
+features[features_api][] = api:2
+features[user_role][] = Moderator
