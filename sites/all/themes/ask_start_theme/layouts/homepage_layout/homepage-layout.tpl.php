@@ -19,25 +19,17 @@
   </section>
   <div class="full-width home-content-wrapper">
     <div class="home-content">
-      <div class="activity-nodes-wrapper">
-        <section class="activity-nodes">
-          <?php print $content['activity_nodes']; ?>
-        </section>
-
-        <div class="bottom-wrapper">
-          <div class="bottom-left">
-            <?php print $content['bottom_left']; ?>
-          </div>
-          <div class="bottom-right">
-            <?php print $content['bottom_right']; ?>
-          </div>
-        </div>
-      </div>
-      <section class="activity-comments-wrapper">
-        <div class="activity-comments">
-          <?php print $content['activity_comments']; ?>
-        </div>
+      <section class="side-content left">
+        <?php print $content['side_left']; ?>
       </section>
+      <section class="side-content right">
+        <?php print $content['side_right']; ?>
+      </section>
+    </div>
+  </div>
+  <div class="full-width  bottom-wrapper">
+    <div class="bottom">
+      <?php print $content['bottom_region']; ?>
     </div>
   </div>
 </div>

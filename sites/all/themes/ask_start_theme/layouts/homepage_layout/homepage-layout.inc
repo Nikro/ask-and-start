@@ -9,9 +9,8 @@ $plugin = array(
   'regions' => array(
     'top_region' => t('Top Region'),
     'stats_line' => t('Stats Line'),
-    'activity_nodes' => t('Node Activities'),
-    'activity_comments' => t('Comment Activities'),
-    'bottom_left' => t('Bottom Left'),
-    'bottom_right' => t('Bottom Right'),
+    'side_left' => t('Side Left'),
+    'side_right' => t('Side Right'),
+    'bottom_region' => t('Bottom Region'),
   ),
 );
