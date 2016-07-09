@@ -9,9 +9,9 @@ dependencies[] = libraries
 dependencies[] = jquery_update
 dependencies[] = entity
 
-; Information added by Drupal.org packaging script on 2015-12-16
-version = "7.x-2.9"
+; Information added by Drupal.org packaging script on 2016-06-23
+version = "7.x-2.9+5-dev"
 core = "7.x"
 project = "select2widget"
-datestamp = "1450259642"
+datestamp = "1466666041"
 

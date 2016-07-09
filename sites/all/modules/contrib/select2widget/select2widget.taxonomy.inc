@@ -78,6 +78,15 @@ function select2widget_taxonomy_term_reference_widget_settings_form($field, $ins
       '#description' => t('Select the method used to collect autocomplete suggestions. Note that <em>Contains</em> can cause performance issues on sites with thousands of nodes.'),
     );
 
+    $form['select2widgetajax']['match_limit'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Limit number of matches'),
+      '#description' => t('Use 0 for no limit. Performance may be affected for a large number of matches.'),
+      '#default_value' => $settings['select2widgetajax']['match_limit'],
+      '#element_validate' => array('element_validate_integer'),
+      '#required' => TRUE,
+    );
+
     $form['select2widgetajax']['separator'] = array(
       '#type' => 'textfield',
       '#size' => 1,
@@ -137,7 +146,7 @@ function select2widget_taxonomy_term_reference_widget_settings_form($field, $ins
 
 function select2widget_taxonomy_term_reference_get_matches($field, $instance, $entity_type, $string, $entity_id = '') {
   $voc_name = $field['settings']['allowed_values'][0]['vocabulary'];
-  $settings = $instance['widget']['settings'];
+  $settings = $instance['widget']['settings'][$instance['widget']['type']];
   $voc = taxonomy_vocabulary_machine_name_load($voc_name);
   $vid = (int)$voc->vid;
   $set_level = isset($settings['set_level']) && $settings['set_level'];
@@ -155,8 +164,14 @@ function select2widget_taxonomy_term_reference_get_matches($field, $instance, $e
     $query->condition('h.tid', NULL);
   }
 
-  $query->condition('t.vid', (int)$vid)
-        ->range(0, 10);
+  $query->condition('t.vid', (int)$vid);
+  if ($settings['match_limit']) {
+    // NB match_limit only validates for integer, can include 0 and negative
+    $query->range(0, abs($settings['match_limit']));
+  }
+  else {
+    $query->range(0, 10);
+  }
 
   if ($settings['match_operator'] === 'CONTAINS') {
     $query->condition('t.name', '%' . $string . '%', 'LIKE');
@@ -201,7 +216,7 @@ function select2widget_taxonomy_term_reference_get_matches($field, $instance, $e
 
   foreach ($output as $tid => $term) {
     $matches[] = array(
-      'id' => 'id' . chr(2) . $tid,
+      'id' => 'id' . chr(9) . $tid,
       'title' => $term['name'],
       'data' => '<div class="select2-taxonomy-term">' . $term['name'] . $term['parent'] . '</div>',
     );
@@ -234,7 +249,7 @@ function select2widget_validate_field(&$element, &$form_state, $form) {
   $vid = taxonomy_vocabulary_machine_name_load($vocabulary_name)->vid;
 
   $terms = $element['#value'];
-  $terms = str_replace('id' . chr(2), '', $terms);
+  $terms = str_replace('id' . chr(9), '', $terms);
   $terms = explode($settings['separator'], $terms);
   $terms = array_filter($terms);
 
@@ -257,7 +272,7 @@ function select2widget_validate_field(&$element, &$form_state, $form) {
       $value[] = array('tid' => $taxonomy->tid);
     }
 
-    $default['id' . chr(2) . $taxonomy->tid] = $taxonomy->name;
+    $default['id' . chr(9) . $taxonomy->tid] = $taxonomy->name;
   }
 
   $element['#attached']['js'][0]['data']['select2widgetajax']['elements'][$element['#id']]['init'] = $default;

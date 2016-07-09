@@ -70,6 +70,7 @@ function select2widget_field_widget_info() {
         'min_char' => 1,
         'delay' => 100,
         'match_operator' => 'STARTS_WITH',
+        'match_limit' => 10,
         'view_mode' => 'default',
         'placeholder' => t('Search'),
       )
@@ -147,7 +148,7 @@ function select2widget_field_widget_form(&$form, &$form_state, $field, $instance
         foreach ($items as $item) {
           $term = taxonomy_term_load($item['tid']);
           if ($term) {
-            $tags['id' . chr(2) . $term->tid] = $term->name;
+            $tags['id' . chr(9) . $term->tid] = $term->name;
           }
         }
 

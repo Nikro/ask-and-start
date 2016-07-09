@@ -73,6 +73,7 @@ function _select2widget_options_properties($type, $multiple, $required, $has_val
     'strip_tags' => FALSE,
     'empty_option' => FALSE,
     'optgroups' => FALSE,
+    'strip_tags_and_unescape' => FALSE,
   );
 
   $properties = array();

@@ -65,6 +65,15 @@ function select2widget_entityreference_widget_settings_form($field, $instance) {
       '#description' => t('Select the method used to collect autocomplete suggestions. Note that <em>Contains</em> can cause performance issues on sites with thousands of nodes.'),
     );
 
+    $form['select2widgetajax']['match_limit'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Limit number of matches'),
+      '#description' => t('Use 0 for no limit. Performance may be affected for a large number of matches.'),
+      '#default_value' => $settings['select2widgetajax']['match_limit'],
+      '#element_validate' => array('element_validate_integer'),
+      '#required' => TRUE,
+    );
+
     $form['select2widgetajax']['width'] = array(
       '#type' => 'textfield',
       '#size' => '5',
@@ -121,11 +130,11 @@ function select2widget_entity_process_callback($element, &$form_state, $form) {
     'url' => $element['#autocomplete_path'],
     'cardinality' => $cardinality,
     'init' => $element['#init'],
-    'placeholder' => isset($element['#settings']['select2widgetajax']['placeholder']) ? $element['#settings']['select2widgetajax']['placeholder'] : '',
-    'min_char' => $element['#settings']['select2widgetajax']['min_char']
+    'placeholder' => (isset($element['#settings']['select2widgetajax']) && isset($element['#settings']['select2widgetajax']['placeholder'])) ? $element['#settings']['select2widgetajax']['placeholder'] : '',
+    'min_char' => (isset($element['#settings']['select2widgetajax']) && isset($element['#settings']['select2widgetajax']['min_char']))?$element['#settings']['select2widgetajax']['min_char']:'',
   );
 
-  if(isset($element['#settings']['select2widgetajax']['width'])){
+  if(isset($element['#settings']['select2widgetajax']) && isset($element['#settings']['select2widgetajax']['width'])){
     $data['select2widgetajax']['elements'][$element['#id']]['width'] = $element['#settings']['select2widgetajax']['width'];
   }
 
@@ -184,7 +193,7 @@ function select2widget_entityreference_get_matches($field, $instance, $entity_ty
   }
 
   $handler = entityreference_get_selection_handler($field, $instance, $entity_type, $entity);
-  $entity_labels = $handler->getReferencableEntities($string, $settings['match_operator'], 20);
+  $entity_labels = $handler->getReferencableEntities($string, $settings['match_operator'], abs($settings['match_limit']));
   $matches = select2widget_render_modes($entity_labels, $settings['view_mode'], $field['settings']['target_type']);
 
   drupal_json_output($matches);
