@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Ask Nodes feature.
+ */
+
+include_once 'ask_nodes.features.inc';
