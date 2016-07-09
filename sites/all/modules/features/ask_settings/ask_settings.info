@@ -8,6 +8,7 @@ dependencies[] = features
 dependencies[] = filter
 dependencies[] = media_wysiwyg
 dependencies[] = picture
+features[ckeditor_profile][] = Advanced
 features[ckeditor_profile][] = CKEditor Global Profile
 features[ckeditor_profile][] = Standard
 features[features_api][] = api:2
