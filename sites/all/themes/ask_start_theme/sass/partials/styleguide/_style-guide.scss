@@ -122,6 +122,12 @@ body {
     text-decoration: none;
   }
 }
+.submitted {
+  @include font-size(small);
+  a {
+    @include font-size(small);
+  }
+}
 
 /* ******************** */
 /* Ratings: Stars, etc. */

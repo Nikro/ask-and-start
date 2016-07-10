@@ -162,6 +162,25 @@ body {
   text-decoration: none;
 }
 
+.submitted {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+}
+.submitted a {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+}
+
 /* ******************** */
 /* Ratings: Stars, etc. */
 /* ******************** */
