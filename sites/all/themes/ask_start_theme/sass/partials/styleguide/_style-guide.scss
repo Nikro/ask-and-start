@@ -128,12 +128,116 @@ body {
     @include font-size(small);
   }
 }
+.date-display-interval,
+.top-line {
+  @include font-size(small, 300, normal);
+  em {
+    font-style: normal;
+  }
+}
+.rate-wrapper {
+  float: right;
+  .rate-widget {
+    position: relative;
+    top: rem(10px);
+    display: inline-block;
+
+    .rate-number-up-down-btn-up,
+    .rate-number-up-down-btn-down {
+      font-size: 0;
+      background: none;
+      display: inline-block;
+      text-indent: 0;
+      width: auto;
+      height: auto;
+      margin: 0;
+
+      text-decoration: none;
+      color: $gray;
+    }
+    .rate-number-up-down-rating {
+      padding: rem(0 10px);
+      display: inline-block;
+    }
+    .rate-number-up-down-btn-up {
+      @include icon(before, thumb_up) {
+        font-size: 1rem;
+      }
+    }
+    .rate-number-up-down-btn-down {
+      @include icon(before, thumb_down) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+.field-name-field-q-attachments {
+  @include font-size(small);
+  margin: rem(10px 0);
+
+  .file {
+    .file-attach.icon {
+      @include font-size(small, 300);
+      @include border-radius(5px);
+      @include icon(before, attachment) {
+        margin-right: rem(5px);
+      }
+      margin-right: rem(5px);
+      padding: rem(3px 5px);
+      display: inline-block;
+      background: $light_color;
+      color: $gray;
+      text-transform: lowercase;
+    }
+  }
+}
 
 /* ******************** */
 /* Ratings: Stars, etc. */
 /* ******************** */
+.flag-follow,
+.flag-reported_comments {
+  margin-right: 0;
+  padding-right: 0;
 
-/* ************************ */
+  .flag-action {
+    @include icon(before, turned_in) {
+      font-size: 1.7rem;
+      position: relative;
+      top: rem(5px);
+    }
+    text-decoration: none;
+  }
+  .unflag-action {
+    @include icon(before, turned_in_not) {
+      font-size: 1.7rem;
+      position: relative;
+      top: rem(5px);
+    }
+    text-decoration: none;
+  }
+}
+.flag-reported_comments {
+  position: relative;
+  top: -3px;
+  color: $gray;
+  margin: rem(0 10px);
+  @include font-size(small);
+  a {
+    @include font-size(small);
+    color: $gray;
+  }
+
+  .flag-action,
+  .unflag-action {
+    @include icon(before, flag) {
+      font-size: 1.2rem;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+  /* ************************ */
 /* User and Profile related */
 /* ************************ */
 

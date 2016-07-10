@@ -89,3 +89,18 @@
 .pane-page-breadcrumb {
   @include container();
 }
+
+.page-node {
+  @include breakpoint($desktop) {
+    .pane-page-content {
+      @include container();
+
+      .main-content-wrapper {
+        @include span(8 of 12);
+      }
+      .sidebar-wrapper {
+        @include span(4 of 12);
+      }
+    }
+  }
+}
