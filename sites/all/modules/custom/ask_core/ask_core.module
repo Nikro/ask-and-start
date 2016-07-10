@@ -39,3 +39,10 @@ function ask_core_form_views_exposed_form_alter(&$form, $form_state) {
      $form['field_official_progress']['#access'] = FALSE;
    }
  }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function ask_core_form_comment_form_alter(&$form, &$form_state) {
+  $form['actions']['submit']['#value'] = t('Submit');
+}
