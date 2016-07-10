@@ -49,11 +49,11 @@ function ask_ratings_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => FALSE,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'ask_ratings',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Reported comments".
   $flags['reported_comments'] = array(
@@ -63,7 +63,7 @@ function ask_ratings_flag_default_flags() {
     'types' => array(
       0 => 'comment_node_question',
     ),
-    'flag_short' => 'Report this comment',
+    'flag_short' => 'Report',
     'flag_long' => 'Report this comment',
     'flag_message' => 'You have reported that comment',
     'unflag_short' => 'Cancel report',

@@ -34,10 +34,17 @@
 .pane-q-as-panel-pane-1,
 .pane-tuts-experiences-panel-pane-1,
 .pane-views-exp-search-panel-pane-search .pane-content,
-.pane-search-panel-pane-search {
+.pane-search-panel-pane-search,
+.pane-node-content,
+.pane-governmental-progress-government-progress,
+.pane-node-comment-form,
+.pane-question-comments-panel-pane-1,
+.pane-node-field-q-status,
+.pane-governmental-progress-fsea-progress {
   @include material-card(1);
   background: $white_neutral;
   padding: rem(20px);
+  margin-bottom: rem(20px);
 
   .pane-title {
     @include font-size(big);
@@ -74,6 +81,82 @@
   a {
     color: $text_color;
   }
+  .created {
+    @include font-size(small, 300);
+  }
+  .node-details {
+    @include clearfix;
+  }
+  .official-party {
+    @include span(6 of 12);
+    .field-item {
+      @include icon(before, account_balance) {
+        color: $gray;
+      }
+      a {
+        @include font-size(normal);
+        padding-left: rem(5px);
+        text-decoration: none;
+      }
+    }
+  }
+  .legal-type {
+    @include span(6 of 12);
+    .field-item {
+      @include icon(before, person) {
+        color: $gray;
+      }
+      a {
+        @include font-size(normal);
+        padding-left: rem(5px);
+        text-decoration: none;
+      }
+    }
+  }
+  .location {
+    @include span(6 of 12);
+    .field-item {
+      @include icon(before, room) {
+        color: $gray;
+      }
+      a {
+        @include font-size(normal);
+        padding-left: rem(5px);
+        text-decoration: none;
+      }
+    }
+  }
+  .industry {
+    @include span(6 of 12);
+    .field-item {
+      @include icon(before, domain) {
+        color: $gray;
+      }
+      a {
+        @include font-size(normal);
+        padding-left: rem(5px);
+        text-decoration: none;
+      }
+    }
+  }
+  .field-name-body {
+    @include font-size(normal, 300);
+  }
+  .field-name-field-q-tags {
+    .field-item {
+      @include icon(before, local_offer) {
+        color: $gray;
+        position: relative;
+        top: rem(2px);
+      }
+      a {
+        @include font-size(small, 300);
+        text-decoration: none;
+        padding-left: rem(5px);
+        text-transform: uppercase;
+      }
+    }
+  }
 
   &.node-teaser {
     h4 {
@@ -83,11 +166,6 @@
         text-decoration: none;
       }
     }
-    .content {
-      .field-name-body {
-        @include font-size(normal, 300);
-      }
-    }
     .comment-count-clear {
       @include icon(before, chat) {
         font-size: 1.7rem;
@@ -95,27 +173,7 @@
         top: rem(7px);
       }
     }
-    .flag-follow {
-      margin-right: 0;
-      padding-right: 0;
 
-      .flag-action {
-        @include icon(before, turned_in) {
-          font-size: 1.7rem;
-          position: relative;
-          top: rem(5px);
-        }
-        text-decoration: none;
-      }
-      .unflag-action {
-        @include icon(before, turned_in_not) {
-          font-size: 1.7rem;
-          position: relative;
-          top: rem(5px);
-        }
-        text-decoration: none;
-      }
-    }
     .flag-super-wrapper {
       margin-right: rem(10px);
     }
@@ -152,7 +210,28 @@
     }
   }
 }
-
+.view-question-comments {
+  .views-row {
+    margin: rem(30px 0);
+  }
+}
+.comment {
+  .field-name-comment-body {
+    @include font-size(normal, 300);
+  }
+  > .links {
+    li {
+      a {
+        text-decoration: none;
+        background: $action_color;
+        padding: rem(5px 10px);
+        color: $white_neutral;
+        @include border-radius(2px);
+        @include font-size(small);
+      }
+    }
+  }
+}
 /* ***************************** */
 /*  CUSTOM NODE-RELATED CONTENT  */
 /* ***************************** */
@@ -164,7 +243,13 @@
 /* ********************** */
 /*  CUSTOM PANES CONTENT  */
 /* ********************** */
-
+.pane-governmental-progress-government-progress {
+  .pane-title {
+    @include icon(before, account_balance) {
+      font-size: 1.5rem;
+    }
+  }
+}
 
 /* ************************** */
 /*  OTHER RANDOM CUSTOM STUFF */

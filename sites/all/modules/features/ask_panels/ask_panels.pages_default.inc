@@ -44,6 +44,12 @@ function ask_panels_default_page_manager_handlers() {
         ),
       ),
     ),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Questions
+%node:title',
+    'panels_breadcrumbs_paths' => 'questions
+%node:url',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
   $display->layout = 'node-layout';

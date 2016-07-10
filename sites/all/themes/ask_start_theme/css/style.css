@@ -181,9 +181,173 @@ body {
   font-family: "Roboto";
 }
 
+.date-display-interval,
+.top-line {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Roboto";
+}
+.date-display-interval em,
+.top-line em {
+  font-style: normal;
+}
+
+.rate-wrapper {
+  float: right;
+}
+.rate-wrapper .rate-widget {
+  position: relative;
+  top: 0.625rem;
+  display: inline-block;
+}
+.rate-wrapper .rate-widget .rate-number-up-down-btn-up,
+.rate-wrapper .rate-widget .rate-number-up-down-btn-down {
+  font-size: 0;
+  background: none;
+  display: inline-block;
+  text-indent: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  text-decoration: none;
+  color: #666;
+}
+.rate-wrapper .rate-widget .rate-number-up-down-rating {
+  padding: 0 0.625rem;
+  display: inline-block;
+}
+.rate-wrapper .rate-widget .rate-number-up-down-btn-up:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  font-size: 1rem;
+}
+.rate-wrapper .rate-widget .rate-number-up-down-btn-down:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  font-size: 1rem;
+}
+
+.field-name-field-q-attachments {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+  margin: 0.625rem 0;
+}
+.field-name-field-q-attachments .file .file-attach.icon {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Roboto";
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-right: 0.3125rem;
+  padding: 0.1875rem 0.3125rem;
+  display: inline-block;
+  background: #eeeeee;
+  color: #666;
+  text-transform: lowercase;
+}
+.field-name-field-q-attachments .file .file-attach.icon:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  margin-right: 0.3125rem;
+}
+
 /* ******************** */
 /* Ratings: Stars, etc. */
 /* ******************** */
+.flag-follow,
+.flag-reported_comments {
+  margin-right: 0;
+  padding-right: 0;
+}
+.flag-follow .flag-action,
+.flag-reported_comments .flag-action {
+  text-decoration: none;
+}
+.flag-follow .flag-action:before,
+.flag-reported_comments .flag-action:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  font-size: 1.7rem;
+  position: relative;
+  top: 0.3125rem;
+}
+.flag-follow .unflag-action,
+.flag-reported_comments .unflag-action {
+  text-decoration: none;
+}
+.flag-follow .unflag-action:before,
+.flag-reported_comments .unflag-action:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  font-size: 1.7rem;
+  position: relative;
+  top: 0.3125rem;
+}
+
+.flag-reported_comments {
+  position: relative;
+  top: -3px;
+  color: #666;
+  margin: 0 0.625rem;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+}
+.flag-reported_comments a {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+  color: #666;
+}
+.flag-reported_comments .flag-action:before,
+.flag-reported_comments .unflag-action:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
+}
+
 /* ************************ */
 /* User and Profile related */
 /* ************************ */
@@ -545,6 +709,42 @@ select {
   clear: both;
 }
 
+@media (min-width: 768px) {
+  .page-node .pane-page-content {
+    max-width: 1170px;
+    max-width: 73.125rem;
+    margin-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: auto;
+  }
+  .page-node .pane-page-content:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  .page-node .pane-page-content .main-content-wrapper {
+    width: 64.08935%;
+    width: 64.08935%;
+    float: left;
+    float: left;
+    margin-left: 1.28866%;
+    margin-left: 1.28866%;
+    margin-right: 1.28866%;
+    margin-right: 1.28866%;
+  }
+  .page-node .pane-page-content .sidebar-wrapper {
+    width: 30.75601%;
+    width: 30.75601%;
+    float: left;
+    float: left;
+    margin-left: 1.28866%;
+    margin-left: 1.28866%;
+    margin-right: 1.28866%;
+    margin-right: 1.28866%;
+  }
+}
+
 /* *********************************** */
 /* *********************************** */
 /* *********************************** */
@@ -554,18 +754,31 @@ select {
 .pane-q-as-panel-pane-1,
 .pane-tuts-experiences-panel-pane-1,
 .pane-views-exp-search-panel-pane-search .pane-content,
-.pane-search-panel-pane-search {
+.pane-search-panel-pane-search,
+.pane-node-content,
+.pane-governmental-progress-government-progress,
+.pane-node-comment-form,
+.pane-question-comments-panel-pane-1,
+.pane-node-field-q-status,
+.pane-governmental-progress-fsea-progress {
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   background: #fff;
   padding: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 .pane-q-as-panel-pane-1 .pane-title,
 .pane-tuts-experiences-panel-pane-1 .pane-title,
 .pane-views-exp-search-panel-pane-search .pane-content .pane-title,
-.pane-search-panel-pane-search .pane-title {
+.pane-search-panel-pane-search .pane-title,
+.pane-node-content .pane-title,
+.pane-governmental-progress-government-progress .pane-title,
+.pane-node-comment-form .pane-title,
+.pane-question-comments-panel-pane-1 .pane-title,
+.pane-node-field-q-status .pane-title,
+.pane-governmental-progress-fsea-progress .pane-title {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 48px;
@@ -616,6 +829,183 @@ select {
 .node-experience-page a {
   color: #333;
 }
+.node-question .created,
+.node-experience-page .created {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Roboto";
+}
+.node-question .node-details,
+.node-experience-page .node-details {
+  overflow: hidden;
+  *zoom: 1;
+}
+.node-question .official-party,
+.node-experience-page .official-party {
+  width: 47.42268%;
+  width: 47.42268%;
+  float: left;
+  float: left;
+  margin-left: 1.28866%;
+  margin-left: 1.28866%;
+  margin-right: 1.28866%;
+  margin-right: 1.28866%;
+}
+.node-question .official-party .field-item:before,
+.node-experience-page .official-party .field-item:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  color: #666;
+}
+.node-question .official-party .field-item a,
+.node-experience-page .official-party .field-item a {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+  padding-left: 0.3125rem;
+  text-decoration: none;
+}
+.node-question .legal-type,
+.node-experience-page .legal-type {
+  width: 47.42268%;
+  width: 47.42268%;
+  float: left;
+  float: left;
+  margin-left: 1.28866%;
+  margin-left: 1.28866%;
+  margin-right: 1.28866%;
+  margin-right: 1.28866%;
+}
+.node-question .legal-type .field-item:before,
+.node-experience-page .legal-type .field-item:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  color: #666;
+}
+.node-question .legal-type .field-item a,
+.node-experience-page .legal-type .field-item a {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+  padding-left: 0.3125rem;
+  text-decoration: none;
+}
+.node-question .location,
+.node-experience-page .location {
+  width: 47.42268%;
+  width: 47.42268%;
+  float: left;
+  float: left;
+  margin-left: 1.28866%;
+  margin-left: 1.28866%;
+  margin-right: 1.28866%;
+  margin-right: 1.28866%;
+}
+.node-question .location .field-item:before,
+.node-experience-page .location .field-item:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  color: #666;
+}
+.node-question .location .field-item a,
+.node-experience-page .location .field-item a {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+  padding-left: 0.3125rem;
+  text-decoration: none;
+}
+.node-question .industry,
+.node-experience-page .industry {
+  width: 47.42268%;
+  width: 47.42268%;
+  float: left;
+  float: left;
+  margin-left: 1.28866%;
+  margin-left: 1.28866%;
+  margin-right: 1.28866%;
+  margin-right: 1.28866%;
+}
+.node-question .industry .field-item:before,
+.node-experience-page .industry .field-item:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  color: #666;
+}
+.node-question .industry .field-item a,
+.node-experience-page .industry .field-item a {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+  padding-left: 0.3125rem;
+  text-decoration: none;
+}
+.node-question .field-name-body,
+.node-experience-page .field-name-body {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Roboto";
+}
+.node-question .field-name-field-q-tags .field-item:before,
+.node-experience-page .field-name-field-q-tags .field-item:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  color: #666;
+  position: relative;
+  top: 0.125rem;
+}
+.node-question .field-name-field-q-tags .field-item a,
+.node-experience-page .field-name-field-q-tags .field-item a {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Roboto";
+  text-decoration: none;
+  padding-left: 0.3125rem;
+  text-transform: uppercase;
+}
 .node-question.node-teaser h4,
 .node-experience-page.node-teaser h4 {
   margin-bottom: 0;
@@ -631,16 +1021,6 @@ select {
   font-family: "Roboto";
   text-decoration: none;
 }
-.node-question.node-teaser .content .field-name-body,
-.node-experience-page.node-teaser .content .field-name-body {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-  font-weight: 300;
-  font-style: normal;
-  font-family: "Roboto";
-}
 .node-question.node-teaser .comment-count-clear:before,
 .node-experience-page.node-teaser .comment-count-clear:before {
   content: "";
@@ -651,41 +1031,6 @@ select {
   font-size: 1.7rem;
   position: relative;
   top: 0.4375rem;
-}
-.node-question.node-teaser .flag-follow,
-.node-experience-page.node-teaser .flag-follow {
-  margin-right: 0;
-  padding-right: 0;
-}
-.node-question.node-teaser .flag-follow .flag-action,
-.node-experience-page.node-teaser .flag-follow .flag-action {
-  text-decoration: none;
-}
-.node-question.node-teaser .flag-follow .flag-action:before,
-.node-experience-page.node-teaser .flag-follow .flag-action:before {
-  content: "";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-family: 'icomoon';
-  font-size: 1.7rem;
-  position: relative;
-  top: 0.3125rem;
-}
-.node-question.node-teaser .flag-follow .unflag-action,
-.node-experience-page.node-teaser .flag-follow .unflag-action {
-  text-decoration: none;
-}
-.node-question.node-teaser .flag-follow .unflag-action:before,
-.node-experience-page.node-teaser .flag-follow .unflag-action:before {
-  content: "";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-family: 'icomoon';
-  font-size: 1.7rem;
-  position: relative;
-  top: 0.3125rem;
 }
 .node-question.node-teaser .flag-super-wrapper,
 .node-experience-page.node-teaser .flag-super-wrapper {
@@ -741,6 +1086,36 @@ select {
   display: inline-block;
 }
 
+.view-question-comments .views-row {
+  margin: 1.875rem 0;
+}
+
+.comment .field-name-comment-body {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Roboto";
+}
+.comment > .links li a {
+  text-decoration: none;
+  background: #1f3a93;
+  padding: 0.3125rem 0.625rem;
+  color: #fff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+}
+
 /* ***************************** */
 /*  CUSTOM NODE-RELATED CONTENT  */
 /* ***************************** */
@@ -750,6 +1125,15 @@ select {
 /* ********************** */
 /*  CUSTOM PANES CONTENT  */
 /* ********************** */
+.pane-governmental-progress-government-progress .pane-title:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  font-size: 1.5rem;
+}
+
 /* ************************** */
 /*  OTHER RANDOM CUSTOM STUFF */
 /* ************************** */
