@@ -142,6 +142,11 @@
   }
   .field-name-body {
     @include font-size(normal, 300);
+
+    a {
+      @include font-size(normal);
+      @include ellipsis;
+    }
   }
   .field-name-field-q-tags {
     .field-item {
@@ -222,6 +227,11 @@
 .comment {
   .field-name-comment-body {
     @include font-size(normal, 300);
+    a {
+      @include font-size(normal);
+      color: $text_color;
+      word-wrap: break-word;
+    }
   }
   > .links {
     li {

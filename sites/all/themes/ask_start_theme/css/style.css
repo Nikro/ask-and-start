@@ -1056,6 +1056,21 @@ select {
   font-style: normal;
   font-family: "Roboto";
 }
+.node-question .field-name-body a,
+.node-experience-page .field-name-body a {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
 .node-question .field-name-field-q-tags .field-item:before,
 .node-experience-page .field-name-field-q-tags .field-item:before {
   content: "";
@@ -1176,6 +1191,17 @@ select {
   font-weight: 300;
   font-style: normal;
   font-family: "Roboto";
+}
+.comment .field-name-comment-body a {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+  color: #333;
+  word-wrap: break-word;
 }
 .comment > .links li a {
   text-decoration: none;
