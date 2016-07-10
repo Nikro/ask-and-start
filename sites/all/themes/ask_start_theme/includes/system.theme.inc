@@ -67,6 +67,15 @@ function ask_start_theme_preprocess_node(&$vars) {
   $more_suggestions = array();
   $more_suggestions[] = implode('__', array('node', $vars['type'], $vars['view_mode']));
   $vars['theme_hook_suggestions'] = array_merge($more_suggestions, $vars['theme_hook_suggestions']);
+  $node = $vars['node'];
+
+  switch ($node->type) {
+    case 'question':
+      // Get followers count.
+      $flags = flag_get_counts('node', $node->nid);
+      $vars['followers_count'] = isset($flags['follow']) ? $flags['follow'] : 0;
+      break;
+  }
 }
 
 

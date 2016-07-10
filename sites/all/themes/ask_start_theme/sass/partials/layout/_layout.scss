@@ -73,6 +73,11 @@
   }
 }
 
+.pane-views-exp-search-panel-pane-search {
+  @include span(12 of 12 inside);
+  margin: rem(20px 0);
+}
+
 .stats-line-wrapper {
   @include breakpoint($desktop) {
     background: $orange_color;
