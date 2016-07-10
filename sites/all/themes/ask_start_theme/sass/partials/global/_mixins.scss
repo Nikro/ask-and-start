@@ -26,9 +26,8 @@
 /// Font - define default font with weight parameter.
 /// @access public
 /// @param {String} $weight - Font weight
-@mixin font-roboto($weight: 500) {
+@mixin font-roboto {
   font-family: "Roboto";
-  font-weight: $weight;
 }
 
 /* ************************************** */
@@ -187,6 +186,7 @@ $rem-px-only: false !default;
   }
   font-weight: $font-weight;
   font-style: $font-style;
+  @include font-roboto;
 }
 
 @mixin v-align-center() {
