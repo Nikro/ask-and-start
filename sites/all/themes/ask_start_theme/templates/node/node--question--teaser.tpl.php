@@ -109,8 +109,12 @@
     <div class="comment-count-clear icon">
       <?php print $node->comment_count; ?>
       <span class="flag-super-wrapper">
-        <?php print render($content['links']['flag']); ?>
-        <?php print '(' . $followers_count . ')'; ?>
+        <?php if (user_is_anonymous()): ?>
+          <?php print t('Folowers:') . $followers_count; ?>
+        <?php else: ?>
+          <?php print render($content['links']['flag']); ?>
+          <?php print '(' . $followers_count . ')'; ?>
+        <?php endif; ?>
       </span>
       <div class="status-wrapper status-<?php print drupal_html_class($field_q_status[0]['value']); ?>">
         <?php print render($content['field_q_status']); ?>
