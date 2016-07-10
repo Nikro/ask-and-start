@@ -146,6 +146,22 @@ body {
 /* *************** */
 /* Panes and Cards */
 /* *************** */
+.breadcrumb {
+  margin: 1.875rem 0 0;
+}
+.breadcrumb a {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+}
+
 /* ******************** */
 /* Ratings: Stars, etc. */
 /* ******************** */
@@ -452,7 +468,7 @@ select {
     margin-right: auto;
     overflow: hidden;
     *zoom: 1;
-    padding: 1.25rem 0;
+    padding: 3.125rem 0 3.125rem;
     margin-top: 3.125rem;
   }
   .footer-wrapper footer:after {
@@ -496,6 +512,20 @@ select {
   }
 }
 
+.pane-page-breadcrumb {
+  max-width: 1170px;
+  max-width: 73.125rem;
+  margin-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-right: auto;
+}
+.pane-page-breadcrumb:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 /* *********************************** */
 /* *********************************** */
 /* *********************************** */
@@ -504,7 +534,8 @@ select {
 /* *************** */
 .pane-q-as-panel-pane-1,
 .pane-tuts-experiences-panel-pane-1,
-.pane-views-exp-search-panel-pane-search .pane-content {
+.pane-views-exp-search-panel-pane-search .pane-content,
+.pane-search-panel-pane-search {
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -514,7 +545,8 @@ select {
 }
 .pane-q-as-panel-pane-1 .pane-title,
 .pane-tuts-experiences-panel-pane-1 .pane-title,
-.pane-views-exp-search-panel-pane-search .pane-content .pane-title {
+.pane-views-exp-search-panel-pane-search .pane-content .pane-title,
+.pane-search-panel-pane-search .pane-title {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 48px;
@@ -524,6 +556,28 @@ select {
   font-family: "Roboto";
   padding: 0;
   margin: 0;
+}
+
+.page-search .main-content-wrapper {
+  max-width: 1170px;
+  max-width: 73.125rem;
+  margin-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-right: auto;
+}
+.page-search .main-content-wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.pane-views-exp-search-panel-pane-search {
+  float: none;
+}
+
+.footer-wrapper {
+  background: #fff;
 }
 
 /* ***************** */

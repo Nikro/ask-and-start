@@ -525,7 +525,10 @@ function ask_panels_default_page_manager_pages() {
   $page->admin_title = 'Homepage';
   $page->admin_description = 'Homepage of the website.';
   $page->path = 'home';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -702,6 +705,10 @@ function ask_panels_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'name' => 'panel',
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Search',
+    'panels_breadcrumbs_paths' => 'search',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
   $display->layout = 'node-layout';

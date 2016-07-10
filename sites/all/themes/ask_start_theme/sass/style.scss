@@ -33,7 +33,8 @@
 /* *************** */
 .pane-q-as-panel-pane-1,
 .pane-tuts-experiences-panel-pane-1,
-.pane-views-exp-search-panel-pane-search .pane-content {
+.pane-views-exp-search-panel-pane-search .pane-content,
+.pane-search-panel-pane-search {
   @include material-card(1);
   background: $white_neutral;
   padding: rem(20px);
@@ -43,6 +44,17 @@
     padding: 0;
     margin: 0;
   }
+}
+.page-search {
+  .main-content-wrapper {
+    @include container();
+  }
+}
+.pane-views-exp-search-panel-pane-search {
+  float: none;
+}
+.footer-wrapper {
+  background: $white_neutral;
 }
 /* ***************** */
 /* Menus and Related */
