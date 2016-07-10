@@ -535,16 +535,20 @@ select {
 /* ************* */
 /*     VIEWS     */
 /* ************* */
-.node-question {
+.node-question,
+.node-experience-page {
   color: #333;
 }
-.node-question a {
+.node-question a,
+.node-experience-page a {
   color: #333;
 }
-.node-question.node-teaser h4 {
+.node-question.node-teaser h4,
+.node-experience-page.node-teaser h4 {
   margin-bottom: 0;
 }
-.node-question.node-teaser h4 a {
+.node-question.node-teaser h4 a,
+.node-experience-page.node-teaser h4 a {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 24px;
@@ -554,7 +558,8 @@ select {
   font-family: "Roboto";
   text-decoration: none;
 }
-.node-question.node-teaser .content .field-name-body {
+.node-question.node-teaser .content .field-name-body,
+.node-experience-page.node-teaser .content .field-name-body {
   font-size: 16px;
   font-size: 1rem;
   line-height: 24px;
@@ -563,7 +568,8 @@ select {
   font-style: normal;
   font-family: "Roboto";
 }
-.node-question.node-teaser .comment-count-clear:before {
+.node-question.node-teaser .comment-count-clear:before,
+.node-experience-page.node-teaser .comment-count-clear:before {
   content: "";
   speak: none;
   font-style: normal;
@@ -573,14 +579,17 @@ select {
   position: relative;
   top: 0.4375rem;
 }
-.node-question.node-teaser .flag-follow {
+.node-question.node-teaser .flag-follow,
+.node-experience-page.node-teaser .flag-follow {
   margin-right: 0;
   padding-right: 0;
 }
-.node-question.node-teaser .flag-follow .flag-action {
+.node-question.node-teaser .flag-follow .flag-action,
+.node-experience-page.node-teaser .flag-follow .flag-action {
   text-decoration: none;
 }
-.node-question.node-teaser .flag-follow .flag-action:before {
+.node-question.node-teaser .flag-follow .flag-action:before,
+.node-experience-page.node-teaser .flag-follow .flag-action:before {
   content: "";
   speak: none;
   font-style: normal;
@@ -590,10 +599,12 @@ select {
   position: relative;
   top: 0.3125rem;
 }
-.node-question.node-teaser .flag-follow .unflag-action {
+.node-question.node-teaser .flag-follow .unflag-action,
+.node-experience-page.node-teaser .flag-follow .unflag-action {
   text-decoration: none;
 }
-.node-question.node-teaser .flag-follow .unflag-action:before {
+.node-question.node-teaser .flag-follow .unflag-action:before,
+.node-experience-page.node-teaser .flag-follow .unflag-action:before {
   content: "";
   speak: none;
   font-style: normal;
@@ -603,10 +614,12 @@ select {
   position: relative;
   top: 0.3125rem;
 }
-.node-question.node-teaser .flag-super-wrapper {
+.node-question.node-teaser .flag-super-wrapper,
+.node-experience-page.node-teaser .flag-super-wrapper {
   margin-right: 0.625rem;
 }
-.node-question.node-teaser .status-pending:before {
+.node-question.node-teaser .status-pending:before,
+.node-experience-page.node-teaser .status-pending:before {
   content: "";
   speak: none;
   font-style: normal;
@@ -616,7 +629,8 @@ select {
   position: relative;
   top: 0.3125rem;
 }
-.node-question.node-teaser .status-active:before {
+.node-question.node-teaser .status-active:before,
+.node-experience-page.node-teaser .status-active:before {
   content: "";
   speak: none;
   font-style: normal;
@@ -626,7 +640,8 @@ select {
   position: relative;
   top: 0.3125rem;
 }
-.node-question.node-teaser .status-resolved:before {
+.node-question.node-teaser .status-resolved:before,
+.node-experience-page.node-teaser .status-resolved:before {
   content: "";
   speak: none;
   font-style: normal;
@@ -636,7 +651,8 @@ select {
   position: relative;
   top: 0.3125rem;
 }
-.node-question.node-teaser .status-closed:before {
+.node-question.node-teaser .status-closed:before,
+.node-experience-page.node-teaser .status-closed:before {
   content: "";
   speak: none;
   font-style: normal;
@@ -646,7 +662,9 @@ select {
   position: relative;
   top: 0.3125rem;
 }
-.node-question.node-teaser .status-wrapper, .node-question.node-teaser .field-name-field-q-status {
+.node-question.node-teaser .status-wrapper, .node-question.node-teaser .field-name-field-q-status,
+.node-experience-page.node-teaser .status-wrapper,
+.node-experience-page.node-teaser .field-name-field-q-status {
   display: inline-block;
 }
 

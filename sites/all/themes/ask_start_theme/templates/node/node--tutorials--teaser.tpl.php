@@ -83,7 +83,7 @@
   <header>
     <?php print render($title_prefix); ?>
     <?php if (!$page): ?>
-      <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
+      <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h4>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
   </header>
