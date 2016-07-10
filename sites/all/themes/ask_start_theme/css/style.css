@@ -247,7 +247,8 @@ body {
   font-family: "Roboto";
   margin: 0.625rem 0;
 }
-.field-name-field-q-attachments .file .file-attach.icon {
+
+.file .file-attach.icon {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 24px;
@@ -265,7 +266,7 @@ body {
   color: #666;
   text-transform: lowercase;
 }
-.field-name-field-q-attachments .file .file-attach.icon:before {
+.file .file-attach.icon:before {
   content: "";
   speak: none;
   font-style: normal;
@@ -348,9 +349,76 @@ body {
   top: 2px;
 }
 
-/* ************************ */
-/* User and Profile related */
-/* ************************ */
+.view-governmental-progress .views-row {
+  margin: 1.25rem 0;
+}
+.view-governmental-progress .field-content {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Roboto";
+}
+.view-governmental-progress .update .progress-status-wrapper:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+}
+.view-governmental-progress .blocker .progress-status-wrapper:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+}
+.view-governmental-progress .conclusion .progress-status-wrapper:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+}
+.view-governmental-progress .update .progress-status-wrapper,
+.view-governmental-progress .conclusion .progress-status-wrapper,
+.view-governmental-progress .blocker .progress-status-wrapper {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+  text-transform: uppercase;
+}
+.view-governmental-progress .update .progress-status-wrapper:before,
+.view-governmental-progress .conclusion .progress-status-wrapper:before,
+.view-governmental-progress .blocker .progress-status-wrapper:before {
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-right: 0.3125rem;
+}
+.view-governmental-progress ul {
+  margin: 0;
+  padding: 0;
+}
+.view-governmental-progress ul li {
+  list-style: none;
+}
+.view-governmental-progress ul li a {
+  color: #333;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+}
+
 /* ****** */
 /* Footer */
 /* ****** */
@@ -1006,6 +1074,10 @@ select {
   padding-left: 0.3125rem;
   text-transform: uppercase;
 }
+.node-question .field-name-field-q-useful-links,
+.node-experience-page .field-name-field-q-useful-links {
+  margin: 1.25rem 0;
+}
 .node-question.node-teaser h4,
 .node-experience-page.node-teaser h4 {
   margin-bottom: 0;
@@ -1112,6 +1184,35 @@ select {
   line-height: 24px;
   line-height: 1.5rem;
   font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+}
+
+.field-collection-item-field-q-useful-links .field-name-field-ul-link .field-item {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Roboto";
+}
+.field-collection-item-field-q-useful-links .field-name-field-ul-link .field-item:before {
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'icomoon';
+  color: #666;
+  position: relative;
+  top: 0.125rem;
+}
+.field-collection-item-field-q-useful-links .field-name-field-ul-description .field-item {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: 300;
   font-style: normal;
   font-family: "Roboto";
 }

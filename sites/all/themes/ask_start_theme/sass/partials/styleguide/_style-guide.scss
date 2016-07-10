@@ -174,21 +174,20 @@ body {
 .field-name-field-q-attachments {
   @include font-size(small);
   margin: rem(10px 0);
-
-  .file {
-    .file-attach.icon {
-      @include font-size(small, 300);
-      @include border-radius(5px);
-      @include icon(before, attachment) {
-        margin-right: rem(5px);
-      }
+}
+.file {
+  .file-attach.icon {
+    @include font-size(small, 300);
+    @include border-radius(5px);
+    @include icon(before, attachment) {
       margin-right: rem(5px);
-      padding: rem(3px 5px);
-      display: inline-block;
-      background: $light_color;
-      color: $gray;
-      text-transform: lowercase;
     }
+    margin-right: rem(5px);
+    padding: rem(3px 5px);
+    display: inline-block;
+    background: $light_color;
+    color: $gray;
+    text-transform: lowercase;
   }
 }
 
@@ -237,10 +236,45 @@ body {
     }
   }
 }
-  /* ************************ */
-/* User and Profile related */
-/* ************************ */
-
+.view-governmental-progress {
+  .views-row {
+    margin: rem(20px 0);
+  }
+  .field-content {
+    @include font-size(normal, 300);
+  }
+  .update .progress-status-wrapper {
+    @include icon(before, directions_run);
+  }
+  .blocker .progress-status-wrapper {
+    @include icon(before, goat);
+  }
+  .conclusion .progress-status-wrapper {
+    @include icon(before, done_all);
+  }
+  .update .progress-status-wrapper,
+  .conclusion .progress-status-wrapper,
+  .blocker .progress-status-wrapper {
+    @include font-size(normal);
+    text-transform: uppercase;
+    &:before {
+      font-size: 1.2rem;
+      display: inline-block;
+      margin-right: rem(5px);
+    }
+  }
+  ul {
+    margin:0;
+    padding:0;
+    li {
+      list-style: none;
+      a {
+        color: $text_color;
+        @include font-size(small);
+      }
+    }
+  }
+}
 
 /* ****** */
 /* Footer */

@@ -1522,7 +1522,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'If you want to share any useful links, please use this field.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
           'view_mode' => 'full',

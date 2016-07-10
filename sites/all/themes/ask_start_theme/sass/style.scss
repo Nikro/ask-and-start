@@ -157,6 +157,9 @@
       }
     }
   }
+  .field-name-field-q-useful-links {
+    margin: rem(20px 0);
+  }
 
   &.node-teaser {
     h4 {
@@ -229,6 +232,23 @@
         @include border-radius(2px);
         @include font-size(small);
       }
+    }
+  }
+}
+.field-collection-item-field-q-useful-links {
+  .field-name-field-ul-link {
+    .field-item {
+      @include font-size(small);
+      @include icon(before, navigate_next) {
+        color: $gray;
+        position: relative;
+        top: rem(2px);
+      }
+    }
+  }
+  .field-name-field-ul-description {
+    .field-item {
+      @include font-size(small, 300);
     }
   }
 }

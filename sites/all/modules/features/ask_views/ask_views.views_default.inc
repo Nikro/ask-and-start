@@ -225,12 +225,24 @@ function ask_views_views_default_views() {
   $handler->display->display_options['fields']['field_files']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_files']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_files']['multi_type'] = 'ul';
+  /* Field: Field collection item: Progress Type */
+  $handler->display->display_options['fields']['field_progress_type_1']['id'] = 'field_progress_type_1';
+  $handler->display->display_options['fields']['field_progress_type_1']['table'] = 'field_data_field_progress_type';
+  $handler->display->display_options['fields']['field_progress_type_1']['field'] = 'field_progress_type';
+  $handler->display->display_options['fields']['field_progress_type_1']['relationship'] = 'field_fsea_progress_value';
+  $handler->display->display_options['fields']['field_progress_type_1']['label'] = '';
+  $handler->display->display_options['fields']['field_progress_type_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_progress_type_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_progress_type_1']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_progress_type_1']['element_wrapper_class'] = 'update-status-wrapper';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="[field_progress_type]">[field_progress_date][field_progress_update][field_files]</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="[field_progress_type]">
+<div class="progress-status-wrapper">[field_progress_type_1]</div>
+[field_progress_date][field_progress_update][field_files]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $export['governmental_progress'] = $view;
 
