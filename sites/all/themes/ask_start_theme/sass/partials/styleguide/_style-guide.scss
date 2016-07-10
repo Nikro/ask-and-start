@@ -216,6 +216,12 @@ body {
     text-decoration: none;
   }
 }
+.flag-super-wrapper {
+  .flag-follow {
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
 .flag-reported_comments {
   position: relative;
   top: -3px;
@@ -274,6 +280,10 @@ body {
       }
     }
   }
+}
+
+.flag-super-wrapper {
+
 }
 
 /* ****** */

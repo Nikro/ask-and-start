@@ -314,6 +314,11 @@ body {
   top: 0.3125rem;
 }
 
+.flag-super-wrapper .flag-follow {
+  margin-right: 0;
+  padding-right: 0;
+}
+
 .flag-reported_comments {
   position: relative;
   top: -3px;
@@ -891,6 +896,7 @@ select {
 /* ************* */
 .node-question,
 .node-experience-page {
+  margin-bottom: 2.5rem;
   color: #333;
 }
 .node-question a,
