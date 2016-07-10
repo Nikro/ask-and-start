@@ -10,5 +10,6 @@ dependencies[] = rate
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[flag][] = follow
 features[flag][] = reported_comments
 features[variable][] = rate_widgets

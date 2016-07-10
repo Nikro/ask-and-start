@@ -9,3 +9,75 @@
 
 // Importing layout partials for panels.
 @import "../global/base";
+
+
+// Panels everywhere (panel for panels)
+.top-wrapper {
+  @include breakpoint($desktop) {
+    display: block;
+    .top {
+      @include container();
+    }
+  }
+}
+
+.branding-navigation-wrapper {
+  @include breakpoint($desktop) {
+    display: block;
+
+    .branding-navigation {
+      @include container();
+
+      @include element('branding_left') {
+        @include span(6 of 12);
+      }
+      @include element('branding_right') {
+        @include span(6 of 12);
+      }
+    }
+  }
+}
+
+.top-region-wrapper {
+  @include breakpoint($desktop) {
+    .top-region {
+      @include container();
+    }
+  }
+}
+
+.home-content-wrapper {
+  @include breakpoint($desktop) {
+    .home-content {
+      @include container();
+
+      .side-content {
+        @include span(6 of 12);
+      }
+    }
+  }
+}
+
+.footer-wrapper {
+  @include breakpoint($desktop) {
+    footer {
+      @include container();
+      @include clearfix;
+      padding: rem(20px 0);
+      margin-top: rem(50px);
+
+      .small-footer {
+        @include span(3 of 12);
+      }
+    }
+  }
+}
+
+.stats-line-wrapper {
+  @include breakpoint($desktop) {
+    background: $orange_color;
+    .stats-line {
+      text-align: center
+    }
+  }
+}

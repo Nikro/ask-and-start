@@ -7,14 +7,14 @@
 ?>
 
 <div class="panel-layout <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print 'id="' . $css_id . '"'; } ?>>
-  <section class="full-width top-region-wrapper brand-background">
-    <div class="top-region">
-      <?php print $content['top_region']; ?>
-    </div>
-  </section>
   <section class="full-width stats-line-wrapper">
     <div class="stats-line">
       <?php print $content['stats_line']; ?>
+    </div>
+  </section>
+  <section class="full-width top-region-wrapper brand-background">
+    <div class="top-region">
+      <?php print $content['top_region']; ?>
     </div>
   </section>
   <div class="full-width home-content-wrapper">

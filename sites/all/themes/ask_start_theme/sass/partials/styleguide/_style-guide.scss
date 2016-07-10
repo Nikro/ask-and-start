@@ -15,11 +15,24 @@
 //  If you'd prefer a soft reset, uncomment `normalize`
 //////////////////////////////
 @import "../global/base";
+@import "../global/mixins";
 
 /* ***************************** */
 /* General - or - Generic styles */
 /* ***************************** */
+body {
+  background: $light_color;
+}
+.branding-navigation-wrapper {
+  @include box-shadow(material-bottom-shadow(1));
+  background: $white_neutral;
+  position: relative;
+  z-index: 10;
 
+  @include breakpoint($desktop) {
+    padding: rem(20px 0);
+  }
+}
 /* ******************* */
 /* Buttons and related */
 /* ******************* */
@@ -27,7 +40,72 @@
 /* ***************** */
 /* Menus and related */
 /* ***************** */
+.pane-system-user-menu {
+  ul {
+    @include clearfix;
+    float: right;
+    li {
+      list-style: none;
+      float: left;
+      a {
+        @include font-size(small);
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.pane-page-logo {
+  img {
+    width: 35%;
+    height: auto;
+  }
+}
+.pane-system-main-menu {
+  position: relative;
+  z-index: 10;
+  ul {
+    padding: rem(10px 0 0 0);
+    margin: 0;
+    float: right;
+    li {
+      list-style: none;
+      float: left;
+      position: relative;
+      a {
+        @include font-size(normal);
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: rem(5px 0);
+        margin: rem(0 5px);
+        display: inline-block;
+      }
+      ul {
+        @include box-shadow(material-bottom-shadow(1));
+        background: $white_neutral;
+        position: absolute;
+        padding: 0;
+        display: none;
+        left: rem(-10px);
 
+        li {
+          margin: 0;
+          padding: rem(0 10px);
+          width: rem(100px);
+
+          &:hover {
+            background: $light_color;
+          }
+        }
+      }
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+}
 /* **************** */
 /* TABS AND RELATED */
 /* **************** */
@@ -53,12 +131,79 @@
 /* *******************  */
 /* MESSAGES and related */
 /* *******************  */
+.pane-page-messages {
+  @include container();
+  padding: rem(20px 20px 0px);
 
+  .messages {
+    @include font-size(small, 300);
+    border-right: 0 none;
+    border-left: 0 none;
+    position: relative;
+
+    background-image: none;
+
+    @include icon(before, check);
+
+    &.error {
+      @include icon(before, error_outline);
+    }
+    &.warning {
+      @include icon(before, info_outline);
+    }
+
+    &:before {
+      font-size: 1.5rem;
+      @include v-align-center;
+      left: rem(20px);
+    }
+
+    li {
+      margin: rem(10px 0);
+    }
+  }
+
+  @include breakpoint($desktop) {
+    padding: rem(20px);
+  }
+}
+
+.small-footer {
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
 
 /* ************* */
 /* FORM ELEMENTS */
 /* ************* */
-
+#views-exposed-form-search-panel-pane-search {
+  #edit-search-api-views-fulltext-wrapper {
+    @include span(12 of 12);
+    label {
+      display: none;
+    }
+  }
+  #edit-field-q-location-wrapper {
+    @include span(6 of 12 inside);
+  }
+  #edit-field-q-industry-wrapper {
+    @include span(6 of 12 inside);
+  }
+  .views-submit-button {
+    display: none;
+  }
+}
 
 /* ************* */
 /* MISC ELEMENTS */
