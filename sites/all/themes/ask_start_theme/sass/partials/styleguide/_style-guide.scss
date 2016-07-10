@@ -26,6 +26,8 @@ body {
 .branding-navigation-wrapper {
   @include box-shadow(material-bottom-shadow(1));
   background: $white_neutral;
+  position: relative;
+  z-index: 10;
 
   @include breakpoint($desktop) {
     padding: rem(20px 0);

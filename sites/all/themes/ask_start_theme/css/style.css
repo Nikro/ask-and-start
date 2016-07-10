@@ -49,6 +49,8 @@ body {
   -webkit-box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24);
   background: #fff;
+  position: relative;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .branding-navigation-wrapper {
