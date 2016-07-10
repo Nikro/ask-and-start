@@ -83,7 +83,7 @@
   <header>
     <?php print render($title_prefix); ?>
     <?php if (!$page): ?>
-      <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
+      <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h4>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
   </header>
@@ -108,8 +108,13 @@
   <footer>
     <div class="comment-count-clear icon">
       <?php print $node->comment_count; ?>
-      <?php print render($content['links']['flag']); ?>
-      <?php print render($content['field_q_status']); ?>
+      <span class="flag-super-wrapper">
+        <?php print render($content['links']['flag']); ?>
+        <?php print '(' . $followers_count . ')'; ?>
+      </span>
+      <div class="status-wrapper status-<?php print drupal_html_class($field_q_status[0]['value']); ?>">
+        <?php print render($content['field_q_status']); ?>
+      </div>
     </div>
   </footer>
 </article>

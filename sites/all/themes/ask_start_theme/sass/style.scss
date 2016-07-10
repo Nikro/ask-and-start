@@ -32,10 +32,17 @@
 /* *** GENERAL *** */
 /* *************** */
 .pane-q-as-panel-pane-1,
-.pane-tuts-experiences-panel-pane-1 {
+.pane-tuts-experiences-panel-pane-1,
+.pane-views-exp-search-panel-pane-search .pane-content {
   @include material-card(1);
   background: $white_neutral;
   padding: rem(20px);
+
+  .pane-title {
+    @include font-size(big);
+    padding: 0;
+    margin: 0;
+  }
 }
 /* ***************** */
 /* Menus and Related */
@@ -49,7 +56,90 @@
 /* ************* */
 /*     VIEWS     */
 /* ************* */
+.node-question,
+.node-experience-page {
+  color: $text_color;
+  a {
+    color: $text_color;
+  }
 
+  &.node-teaser {
+    h4 {
+      margin-bottom: 0;
+      a {
+        @include font-size(bigger);
+        text-decoration: none;
+      }
+    }
+    .content {
+      .field-name-body {
+        @include font-size(normal, 300);
+      }
+    }
+    .comment-count-clear {
+      @include icon(before, chat) {
+        font-size: 1.7rem;
+        position: relative;
+        top: rem(7px);
+      }
+    }
+    .flag-follow {
+      margin-right: 0;
+      padding-right: 0;
+
+      .flag-action {
+        @include icon(before, turned_in) {
+          font-size: 1.7rem;
+          position: relative;
+          top: rem(5px);
+        }
+        text-decoration: none;
+      }
+      .unflag-action {
+        @include icon(before, turned_in_not) {
+          font-size: 1.7rem;
+          position: relative;
+          top: rem(5px);
+        }
+        text-decoration: none;
+      }
+    }
+    .flag-super-wrapper {
+      margin-right: rem(10px);
+    }
+    .status-pending {
+      @include icon(before, sentiment_neutral) {
+        font-size: 1.7rem;
+        position: relative;
+        top: rem(5px);
+      };
+    }
+    .status-active {
+      @include icon(before, sentiment_neutral) {
+        font-size: 1.7rem;
+        position: relative;
+        top: rem(5px);
+      };
+    }
+    .status-resolved {
+      @include icon(before, sentiment_very_satisfied) {
+        font-size: 1.7rem;
+        position: relative;
+        top: rem(5px);
+      };
+    }
+    .status-closed {
+      @include icon(before, sentiment_dissatisfied) {
+        font-size: 1.7rem;
+        position: relative;
+        top: rem(5px);
+      };
+    }
+    .status-wrapper, .field-name-field-q-status {
+      display: inline-block;
+    }
+  }
+}
 
 /* ***************************** */
 /*  CUSTOM NODE-RELATED CONTENT  */
