@@ -160,6 +160,57 @@ function ask_nodes_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_fsea_progress-field_files'.
+  $field_instances['field_collection_item-field_fsea_progress-field_files'] = array(
+    'bundle' => 'field_fsea_progress',
+    'deleted' => 0,
+    'description' => 'If you want to attach any files, scans, forms, feel free to do so.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_files',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'attachments',
+      'file_extensions' => 'pdf doc docx xls xlsx ppt pptx avi mpg mpeg mp3',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 'audio',
+          'document' => 'document',
+          'image' => 'image',
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_fsea_progress-field_progress_date'.
   $field_instances['field_collection_item-field_fsea_progress-field_progress_date'] = array(
     'bundle' => 'field_fsea_progress',
@@ -303,6 +354,57 @@ function ask_nodes_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_official_progress-field_files'.
+  $field_instances['field_collection_item-field_official_progress-field_files'] = array(
+    'bundle' => 'field_official_progress',
+    'deleted' => 0,
+    'description' => 'If you want to attach any files, scans, forms, feel free to do so.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_files',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'attachments',
+      'file_extensions' => 'pdf doc docx xls xlsx ppt pptx avi mpg mpeg mp3',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 'audio',
+          'document' => 'document',
+          'image' => 'image',
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 5,
     ),
   );
 
@@ -462,7 +564,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'Optionally specify the description of the link you\'ve specified.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -523,7 +625,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -976,7 +1078,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
           'add' => 'Add',
@@ -992,7 +1094,7 @@ function ask_nodes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
@@ -1019,7 +1121,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'Governmental official progress.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
           'add' => 'Add',
@@ -1035,7 +1137,7 @@ function ask_nodes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -1061,7 +1163,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'If you want to attach any files, scans, forms, feel free to do so.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
@@ -1071,7 +1173,7 @@ function ask_nodes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -1118,7 +1220,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'Industries that are involved into this question.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -1128,7 +1230,7 @@ function ask_nodes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
@@ -1161,7 +1263,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'Which legal entity types are involved in this question? Which legal entity type are you?',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -1171,7 +1273,7 @@ function ask_nodes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
@@ -1197,7 +1299,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'Please specify which location is relevant to this question.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -1207,7 +1309,7 @@ function ask_nodes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -1248,7 +1350,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'Is this question location based? If you think that this question is strictly related to a location, check the box.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -1258,7 +1360,7 @@ function ask_nodes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -1287,7 +1389,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'Officially party that is responsible for answering this question.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -1297,7 +1399,7 @@ function ask_nodes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -1335,17 +1437,18 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'What is the status of the question at this stage?',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
         'weight' => 9,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'list_default',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -1372,7 +1475,7 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'If you want to tag your question, in example "Starting a Company", use this field.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -1382,7 +1485,7 @@ function ask_nodes_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -1419,23 +1522,19 @@ function ask_nodes_field_default_field_instances() {
     'description' => 'If you want to share any useful links, please use this field.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
           'view_mode' => 'full',
         ),
-        'type' => 'field_collection_view',
+        'type' => 'field_collection_fields',
         'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',

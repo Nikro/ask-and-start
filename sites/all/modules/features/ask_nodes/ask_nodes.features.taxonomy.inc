@@ -59,7 +59,7 @@ function ask_nodes_taxonomy_default_vocabularies() {
       'name' => 'Locations',
       'machine_name' => 'locations',
       'description' => 'Locations and related.',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
