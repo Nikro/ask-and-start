@@ -896,7 +896,6 @@ select {
 /* ************* */
 .node-question,
 .node-experience-page {
-  margin-bottom: 2.5rem;
   color: #333;
 }
 .node-question a,
@@ -1098,6 +1097,10 @@ select {
 .node-question .field-name-field-q-useful-links,
 .node-experience-page .field-name-field-q-useful-links {
   margin: 1.25rem 0;
+}
+.node-question.node-teaser,
+.node-experience-page.node-teaser {
+  margin-bottom: 2.5rem;
 }
 .node-question.node-teaser h4,
 .node-experience-page.node-teaser h4 {

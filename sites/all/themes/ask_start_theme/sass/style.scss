@@ -77,7 +77,6 @@
 /* ************* */
 .node-question,
 .node-experience-page {
-  margin-bottom: rem(40px);
   color: $text_color;
   a {
     color: $text_color;
@@ -168,6 +167,8 @@
   }
 
   &.node-teaser {
+    margin-bottom: rem(40px);
+
     h4 {
       margin-bottom: 0;
       a {
