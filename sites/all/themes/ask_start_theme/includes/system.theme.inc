@@ -71,6 +71,8 @@ function ask_start_theme_preprocess_node(&$vars) {
 
   switch ($node->type) {
     case 'question':
+    case 'experience_page':
+    case 'tutorials':
       // Get followers count.
       $flags = flag_get_counts('node', $node->nid);
       $vars['followers_count'] = isset($flags['follow']) ? $flags['follow'] : 0;
