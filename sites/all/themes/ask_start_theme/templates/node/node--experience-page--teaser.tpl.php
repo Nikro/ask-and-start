@@ -88,6 +88,13 @@
     <?php print render($title_suffix); ?>
   </header>
 
+  <?php if ($display_submitted): ?>
+    <footer>
+      <?php print $user_picture; ?>
+      <p class="submitted"><?php print $submitted; ?></p>
+    </footer>
+  <?php endif; ?>
+
   <div class="content"<?php print $content_attributes; ?>>
     <?php
     // We hide the comments and links now so that we can render them later.
