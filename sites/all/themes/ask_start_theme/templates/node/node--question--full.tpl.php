@@ -88,6 +88,6 @@
   </div>
   <?php print render($content['body']); ?>
   <?php print render($content['field_q_tags']); ?>
-  <?php print render($content['field_q_useful_links']); ?>
   <?php print render($content['field_q_attachments']); ?>
+  <?php print render($content['field_q_useful_links']); ?>
 </article>
