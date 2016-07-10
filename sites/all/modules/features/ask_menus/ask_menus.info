@@ -14,7 +14,6 @@ features[menu_custom][] = menu-social-links
 features[menu_custom][] = user-menu
 features[menu_links][] = main-menu_experience:<front>
 features[menu_links][] = main-menu_how-to:<front>
-features[menu_links][] = main-menu_questions:<front>
 features[menu_links][] = main-menu_tutorials:<front>
 features[menu_links][] = menu-footer-first_rules:<front>
 features[menu_links][] = menu-footer-second_legal:<front>

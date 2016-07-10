@@ -57,29 +57,6 @@ function ask_menus_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_questions:<front>.
-  $menu_links['main-menu_questions:<front>'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Questions',
-    'options' => array(
-      'attributes' => array(),
-      'item_attributes' => array(
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'identifier' => 'main-menu_questions:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -50,
-    'customized' => 1,
-  );
   // Exported menu link: main-menu_tutorials:<front>.
   $menu_links['main-menu_tutorials:<front>'] = array(
     'menu_name' => 'main-menu',
@@ -308,7 +285,6 @@ function ask_menus_menu_default_menu_links() {
   t('Legal');
   t('Log in');
   t('Log out');
-  t('Questions');
   t('Register');
   t('Rules');
   t('Tutorials');
