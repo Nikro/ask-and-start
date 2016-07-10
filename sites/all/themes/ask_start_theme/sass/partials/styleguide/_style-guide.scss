@@ -15,11 +15,22 @@
 //  If you'd prefer a soft reset, uncomment `normalize`
 //////////////////////////////
 @import "../global/base";
+@import "../global/mixins";
 
 /* ***************************** */
 /* General - or - Generic styles */
 /* ***************************** */
+body {
+  background: $light_color;
+}
+.branding-navigation-wrapper {
+  @include box-shadow(material-bottom-shadow(1));
+  background: $white_neutral;
 
+  @include breakpoint($desktop) {
+    padding: rem(20px 0);
+  }
+}
 /* ******************* */
 /* Buttons and related */
 /* ******************* */
@@ -44,7 +55,7 @@
 }
 .pane-page-logo {
   img {
-    width: 50%;
+    width: 35%;
     height: auto;
   }
 }
@@ -52,7 +63,7 @@
   position: relative;
   z-index: 10;
   ul {
-    padding: 0;
+    padding: rem(10px 0 0 0);
     margin: 0;
     float: right;
     li {
@@ -68,12 +79,21 @@
         display: inline-block;
       }
       ul {
-        display: none;
+        @include box-shadow(material-bottom-shadow(1));
+        background: $white_neutral;
         position: absolute;
+        padding: 0;
+        display: none;
+        left: rem(-10px);
 
         li {
           margin: 0;
-          padding: 0;
+          padding: rem(0 10px);
+          width: rem(100px);
+
+          &:hover {
+            background: $light_color;
+          }
         }
       }
       &:hover {
@@ -165,7 +185,23 @@
 /* ************* */
 /* FORM ELEMENTS */
 /* ************* */
-
+#views-exposed-form-search-panel-pane-search {
+  #edit-search-api-views-fulltext-wrapper {
+    @include span(12 of 12);
+    label {
+      display: none;
+    }
+  }
+  #edit-field-q-location-wrapper {
+    @include span(6 of 12 inside);
+  }
+  #edit-field-q-industry-wrapper {
+    @include span(6 of 12 inside);
+  }
+  .views-submit-button {
+    display: none;
+  }
+}
 
 /* ************* */
 /* MISC ELEMENTS */

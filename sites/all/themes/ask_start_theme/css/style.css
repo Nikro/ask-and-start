@@ -40,6 +40,22 @@
 /* ***************************** */
 /* General - or - Generic styles */
 /* ***************************** */
+body {
+  background: #eeeeee;
+}
+
+.branding-navigation-wrapper {
+  -moz-box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24);
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .branding-navigation-wrapper {
+    padding: 1.25rem 0;
+  }
+}
+
 /* ******************* */
 /* Buttons and related */
 /* ******************* */
@@ -68,7 +84,7 @@
 }
 
 .pane-page-logo img {
-  width: 50%;
+  width: 35%;
   height: auto;
 }
 
@@ -77,7 +93,7 @@
   z-index: 10;
 }
 .pane-system-main-menu ul {
-  padding: 0;
+  padding: 0.625rem 0 0 0;
   margin: 0;
   float: right;
 }
@@ -101,12 +117,22 @@
   display: inline-block;
 }
 .pane-system-main-menu ul li ul {
-  display: none;
+  -moz-box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24);
+  background: #fff;
   position: absolute;
+  padding: 0;
+  display: none;
+  left: -0.625rem;
 }
 .pane-system-main-menu ul li ul li {
   margin: 0;
-  padding: 0;
+  padding: 0 0.625rem;
+  width: 6.25rem;
+}
+.pane-system-main-menu ul li ul li:hover {
+  background: #eeeeee;
 }
 .pane-system-main-menu ul li:hover ul {
   display: block;
@@ -215,6 +241,49 @@
 /* ************* */
 /* FORM ELEMENTS */
 /* ************* */
+#views-exposed-form-search-panel-pane-search #edit-search-api-views-fulltext-wrapper {
+  width: 97.42268%;
+  width: 97.42268%;
+  float: left;
+  float: left;
+  margin-left: 1.28866%;
+  margin-left: 1.28866%;
+  margin-right: 1.28866%;
+  margin-right: 1.28866%;
+}
+#views-exposed-form-search-panel-pane-search #edit-search-api-views-fulltext-wrapper label {
+  display: none;
+}
+#views-exposed-form-search-panel-pane-search #edit-field-q-location-wrapper {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  width: 50%;
+  float: left;
+  float: left;
+  padding-left: 1.28866%;
+  padding-left: 1.28866%;
+  padding-right: 1.28866%;
+  padding-right: 1.28866%;
+}
+#views-exposed-form-search-panel-pane-search #edit-field-q-industry-wrapper {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  width: 50%;
+  float: left;
+  float: left;
+  padding-left: 1.28866%;
+  padding-left: 1.28866%;
+  padding-right: 1.28866%;
+  padding-right: 1.28866%;
+}
+#views-exposed-form-search-panel-pane-search .views-submit-button {
+  display: none;
+}
+
 /* ************* */
 /* MISC ELEMENTS */
 /* ************* */
@@ -348,12 +417,31 @@
   }
 }
 
+@media (min-width: 768px) {
+  .stats-line-wrapper {
+    background: #ff7d1d;
+  }
+  .stats-line-wrapper .stats-line {
+    text-align: center;
+  }
+}
+
 /* *********************************** */
 /* *********************************** */
 /* *********************************** */
 /* *************** */
 /* *** GENERAL *** */
 /* *************** */
+.pane-q-as-panel-pane-1,
+.pane-tuts-experiences-panel-pane-1 {
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background: #fff;
+  padding: 1.25rem;
+}
+
 /* ***************** */
 /* Menus and Related */
 /* ***************** */

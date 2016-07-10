@@ -31,7 +31,12 @@
 /* *************** */
 /* *** GENERAL *** */
 /* *************** */
-
+.pane-q-as-panel-pane-1,
+.pane-tuts-experiences-panel-pane-1 {
+  @include material-card(1);
+  background: $white_neutral;
+  padding: rem(20px);
+}
 /* ***************** */
 /* Menus and Related */
 /* ***************** */

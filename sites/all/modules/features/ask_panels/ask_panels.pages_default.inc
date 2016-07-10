@@ -545,6 +545,32 @@ function ask_panels_default_page_manager_pages() {
     $display->content['new-f812a5ab-af56-4de1-9b18-48627291781d'] = $pane;
     $display->panels['side_right'][0] = 'new-f812a5ab-af56-4de1-9b18-48627291781d';
     $pane = new stdClass();
+    $pane->pid = 'new-a6f28de3-a88f-4e14-9305-d2fb02c8fa3f';
+    $pane->panel = 'stats_line';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Cover image',
+      'title' => '',
+      'body' => '<img src="sites/all/themes/ask_start_theme/img/cover.jpg" />
+',
+      'format' => 'advanced_editor',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a6f28de3-a88f-4e14-9305-d2fb02c8fa3f';
+    $display->content['new-a6f28de3-a88f-4e14-9305-d2fb02c8fa3f'] = $pane;
+    $display->panels['stats_line'][0] = 'new-a6f28de3-a88f-4e14-9305-d2fb02c8fa3f';
+    $pane = new stdClass();
     $pane->pid = 'new-3566e017-3f74-4b08-936a-3763ac0b713d';
     $pane->panel = 'top_region';
     $pane->type = 'block';

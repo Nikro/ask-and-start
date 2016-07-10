@@ -72,3 +72,12 @@
     }
   }
 }
+
+.stats-line-wrapper {
+  @include breakpoint($desktop) {
+    background: $orange_color;
+    .stats-line {
+      text-align: center
+    }
+  }
+}
