@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Ask Taxonomy feature.
+ */
+
+include_once 'ask_taxonomy.features.inc';

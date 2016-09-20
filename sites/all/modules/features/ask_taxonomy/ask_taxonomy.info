@@ -1,0 +1,14 @@
+name = Ask Taxonomy
+description = All the taxonomy related things live here.
+core = 7.x
+package = Ask Entities
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = strongarm
+dependencies[] = taxonomy
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[taxonomy][] = organization_memberships
+features[taxonomy][] = organization_types
+features[taxonomy][] = user_languages
