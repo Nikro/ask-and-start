@@ -6,6 +6,39 @@
 function ask_core_form_alter(&$form, &$form_state, $form_id) {
 //  dsm($form_id);
 //  theme_date_time_ago();
+  switch ($form_id) {
+    case 'user_register_form':
+    case 'user_profile_form':
+      $form['field_specialization']['#states'] = array(
+        'visible' => array(
+          array(
+            ':input[name="field_verified_expert[und]"]' => array('value' => 1),
+          ),
+        ),
+      );
+      $form['field_expert_education']['#states'] = array(
+        'visible' => array(
+          array(
+            ':input[name="field_verified_expert[und]"]' => array('value' => 1),
+          ),
+        ),
+      );
+      $form['field_experience_in_field']['#states'] = array(
+        'visible' => array(
+          array(
+            ':input[name="field_verified_expert[und]"]' => array('value' => 1),
+          ),
+        ),
+      );
+      $form['field_other_credentials']['#states'] = array(
+        'visible' => array(
+          array(
+            ':input[name="field_verified_expert[und]"]' => array('value' => 1),
+          ),
+        ),
+      );
+      break;
+  }
 }
 
 /**
@@ -45,38 +78,4 @@ function ask_core_form_views_exposed_form_alter(&$form, $form_state) {
  */
 function ask_core_form_comment_form_alter(&$form, &$form_state) {
   $form['actions']['submit']['#value'] = t('Submit');
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function ask_core_form_user_register_form_alter(&$form, &$form_state, $form_id) {
-  $form['field_specialization']['#states'] = array(
-    'visible' => array(
-      array(
-        ':input[name="field_verified_expert[und]"]' => array('value' => 1),
-      ),
-    ),
-  );
-  $form['field_expert_education']['#states'] = array(
-    'visible' => array(
-      array(
-        ':input[name="field_verified_expert[und]"]' => array('value' => 1),
-      ),
-    ),
-  );
-  $form['field_experience_in_field']['#states'] = array(
-    'visible' => array(
-      array(
-        ':input[name="field_verified_expert[und]"]' => array('value' => 1),
-      ),
-    ),
-  );
-  $form['field_other_credentials']['#states'] = array(
-    'visible' => array(
-      array(
-        ':input[name="field_verified_expert[und]"]' => array('value' => 1),
-      ),
-    ),
-  );
 }
