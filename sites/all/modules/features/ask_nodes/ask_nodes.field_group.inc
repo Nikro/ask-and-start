@@ -56,10 +56,12 @@ function ask_nodes_field_group_info() {
     'label' => 'Details',
     'weight' => '2',
     'children' => array(
-      0 => 'field_exp_location',
-      1 => 'field_exp_attachments',
-      2 => 'field_exp_useful_links',
-      3 => 'field_exp_tags',
+      0 => 'field_exp_attachments',
+      1 => 'field_exp_location',
+      2 => 'field_exp_tags',
+      3 => 'field_exp_useful_links',
+      4 => 'field_q_industry',
+      5 => 'field_q_official_party',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

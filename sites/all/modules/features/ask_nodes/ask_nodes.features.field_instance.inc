@@ -47,119 +47,6 @@ function ask_nodes_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_exp_useful_links-field_ul_description'.
-  $field_instances['field_collection_item-field_exp_useful_links-field_ul_description'] = array(
-    'bundle' => 'field_exp_useful_links',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Optionally specify the description of the link you\'ve specified.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_ul_description',
-    'label' => 'Description',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'advanced_editor' => 'advanced_editor',
-          'editor' => 'editor',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'advanced_editor' => array(
-              'weight' => -8,
-            ),
-            'editor' => array(
-              'weight' => -10,
-            ),
-            'plain_text' => array(
-              'weight' => -9,
-            ),
-          ),
-        ),
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'maxlength_js' => '',
-        'maxlength_js_enforce' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'maxlength_js_truncate_html' => 0,
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-field_exp_useful_links-field_ul_link'.
-  $field_instances['field_collection_item-field_exp_useful_links-field_ul_link'] = array(
-    'bundle' => 'field_exp_useful_links',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_ul_link',
-    'label' => 'Link',
-    'required' => 1,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'rel_remove' => 'default',
-      'title' => 'optional',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance:
   // 'field_collection_item-field_fsea_progress-field_files'.
   $field_instances['field_collection_item-field_fsea_progress-field_files'] = array(
     'bundle' => 'field_fsea_progress',
@@ -668,6 +555,126 @@ function ask_nodes_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'field_collection_item-field_tips_tricks-field_description'.
+  $field_instances['field_collection_item-field_tips_tricks-field_description'] = array(
+    'bundle' => 'field_tips_tricks',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_description',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'advanced_editor' => 'advanced_editor',
+          'editor' => 'editor',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'advanced_editor' => array(
+              'weight' => -8,
+            ),
+            'editor' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_tips_tricks-field_title'.
+  $field_instances['field_collection_item-field_tips_tricks-field_title'] = array(
+    'bundle' => 'field_tips_tricks',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_title',
+    'label' => 'Title',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'advanced_editor' => 'advanced_editor',
+          'editor' => 'editor',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'advanced_editor' => array(
+              'weight' => -8,
+            ),
+            'editor' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-announcement-body'.
   $field_instances['node-announcement-body'] = array(
     'bundle' => 'announcement',
@@ -892,7 +899,7 @@ function ask_nodes_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -988,25 +995,19 @@ function ask_nodes_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-experience_page-field_exp_useful_links'.
-  $field_instances['node-experience_page-field_exp_useful_links'] = array(
+  // Exported field_instance: 'node-experience_page-field_q_industry'.
+  $field_instances['node-experience_page-field_q_industry'] = array(
     'bundle' => 'experience_page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'If there are any useful links you\'d like to share, use this field.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 3,
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1016,17 +1017,68 @@ function ask_nodes_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_exp_useful_links',
-    'label' => 'Useful Links',
+    'field_name' => 'field_q_industry',
+    'label' => 'Industry',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
+      'active' => 1,
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 0,
+          'force_deepest' => 0,
+          'node_count' => 0,
+        ),
+      ),
+      'type' => 'taxonomy_shs',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-experience_page-field_q_official_party'.
+  $field_instances['node-experience_page-field_q_official_party'] = array(
+    'bundle' => 'experience_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_official_party',
+    'label' => 'Official Party',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 0,
+          'force_deepest' => 0,
+          'node_count' => 0,
+        ),
+      ),
+      'type' => 'taxonomy_shs',
       'weight' => 6,
     ),
   );
@@ -1652,47 +1704,315 @@ function ask_nodes_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-tutorials-body'.
-  $field_instances['node-tutorials-body'] = array(
+  // Exported field_instance: 'node-tutorials-field_exp_attachments'.
+  $field_instances['node-tutorials-field_exp_attachments'] = array(
+    'bundle' => 'tutorials',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_exp_attachments',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'attachments_exp',
+      'file_extensions' => 'pdf doc docx xls xlsx ppt pptx avi mpg mpeg mp3',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 'audio',
+          'document' => 'document',
+          'image' => 'image',
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 48,
+    ),
+  );
+
+  // Exported field_instance: 'node-tutorials-field_q_industry'.
+  $field_instances['node-tutorials-field_q_industry'] = array(
     'bundle' => 'tutorials',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
+        'label' => 'above',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
+    'field_name' => 'field_q_industry',
+    'label' => 'Industry',
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'module' => 'text',
+      'active' => 1,
+      'module' => 'shs',
       'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 0,
+          'force_deepest' => 0,
+          'node_count' => 0,
+        ),
       ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 41,
+      'type' => 'taxonomy_shs',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance: 'node-tutorials-field_q_legal_entity_type'.
+  $field_instances['node-tutorials-field_q_legal_entity_type'] = array(
+    'bundle' => 'tutorials',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_legal_entity_type',
+    'label' => 'Legal Entity Type',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'select2widget',
+      'settings' => array(),
+      'type' => 'select2widget',
+      'weight' => 46,
+    ),
+  );
+
+  // Exported field_instance: 'node-tutorials-field_q_location'.
+  $field_instances['node-tutorials-field_q_location'] = array(
+    'bundle' => 'tutorials',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_location',
+    'label' => 'Location',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'select2widget',
+      'settings' => array(
+        'select2widgetajax' => array(
+          'allow_new' => 0,
+          'match_limit' => 10,
+          'match_operator' => 'STARTS_WITH',
+          'min_char' => 1,
+          'placeholder' => 'Search',
+          'separator' => '|',
+          'set_level' => 0,
+        ),
+      ),
+      'type' => 'select2widgetajax',
+      'weight' => 44,
+    ),
+  );
+
+  // Exported field_instance: 'node-tutorials-field_q_official_party'.
+  $field_instances['node-tutorials-field_q_official_party'] = array(
+    'bundle' => 'tutorials',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_official_party',
+    'label' => 'Official Party',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 0,
+          'force_deepest' => 0,
+          'node_count' => 0,
+        ),
+      ),
+      'type' => 'taxonomy_shs',
+      'weight' => 52,
+    ),
+  );
+
+  // Exported field_instance: 'node-tutorials-field_q_useful_links'.
+  $field_instances['node-tutorials-field_q_useful_links'] = array(
+    'bundle' => 'tutorials',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_useful_links',
+    'label' => 'Useful Links',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 50,
+    ),
+  );
+
+  // Exported field_instance: 'node-tutorials-field_tips_tricks'.
+  $field_instances['node-tutorials-field_tips_tricks'] = array(
+    'bundle' => 'tutorials',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tips_tricks',
+    'label' => 'Tips & Tricks',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 53,
     ),
   );
 
@@ -1705,7 +2025,6 @@ function ask_nodes_field_default_field_instances() {
   t('Description');
   t('FSEA Progress');
   t('Governmental official progress.');
-  t('If there are any useful links you\'d like to share, use this field.');
   t('If this experience is relevant to certain location, please specify to which location.');
   t('If you want to attach any files, scans, forms, feel free to do so.');
   t('If you want to share any useful links, please use this field.');
@@ -1731,6 +2050,8 @@ function ask_nodes_field_default_field_instances() {
   t('Progress Update');
   t('Question Status');
   t('Tags');
+  t('Tips & Tricks');
+  t('Title');
   t('Useful Links');
   t('What is the status of the question at this stage?');
   t('Which legal entity types are involved in this question? Which legal entity type are you?');
