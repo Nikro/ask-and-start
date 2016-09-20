@@ -542,7 +542,7 @@ function ask_panels_default_page_manager_handlers() {
     'panels_page_title' => '',
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => '%user:name',
-    'panels_breadcrumbs_paths' => 'user',
+    'panels_breadcrumbs_paths' => 'user/%user:uid',
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
