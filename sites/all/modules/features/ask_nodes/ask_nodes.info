@@ -75,6 +75,7 @@ features[field_instance][] = node-experience_page-field_exp_tags
 features[field_instance][] = node-experience_page-field_q_industry
 features[field_instance][] = node-experience_page-field_q_official_party
 features[field_instance][] = node-page-body
+features[field_instance][] = node-page-field_files
 features[field_instance][] = node-partner-body
 features[field_instance][] = node-partner-field_logo
 features[field_instance][] = node-partner-field_ul_link
