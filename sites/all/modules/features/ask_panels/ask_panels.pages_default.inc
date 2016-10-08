@@ -440,6 +440,32 @@ function ask_panels_default_page_manager_handlers() {
     $display->content['new-e5530e75-fd77-41c8-82f0-184f53df23e6'] = $pane;
     $display->panels['main'][1] = 'new-e5530e75-fd77-41c8-82f0-184f53df23e6';
     $pane = new stdClass();
+    $pane->pid = 'new-a0aeb8b4-7a5f-431d-a858-6ed70642714b';
+    $pane->panel = 'main';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h2',
+      'class' => '',
+      'id' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'a0aeb8b4-7a5f-431d-a858-6ed70642714b';
+    $display->content['new-a0aeb8b4-7a5f-431d-a858-6ed70642714b'] = $pane;
+    $display->panels['main'][2] = 'new-a0aeb8b4-7a5f-431d-a858-6ed70642714b';
+    $pane = new stdClass();
     $pane->pid = 'new-9e979c8b-d2ca-4bec-9469-6a071169f3a7';
     $pane->panel = 'main';
     $pane->type = 'page_tabs';
@@ -459,11 +485,11 @@ function ask_panels_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '9e979c8b-d2ca-4bec-9469-6a071169f3a7';
     $display->content['new-9e979c8b-d2ca-4bec-9469-6a071169f3a7'] = $pane;
-    $display->panels['main'][2] = 'new-9e979c8b-d2ca-4bec-9469-6a071169f3a7';
+    $display->panels['main'][3] = 'new-9e979c8b-d2ca-4bec-9469-6a071169f3a7';
     $pane = new stdClass();
     $pane->pid = 'new-2f9ebac7-09ae-45e2-ad02-312b90387b8b';
     $pane->panel = 'main';
@@ -483,11 +509,11 @@ function ask_panels_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = '2f9ebac7-09ae-45e2-ad02-312b90387b8b';
     $display->content['new-2f9ebac7-09ae-45e2-ad02-312b90387b8b'] = $pane;
-    $display->panels['main'][3] = 'new-2f9ebac7-09ae-45e2-ad02-312b90387b8b';
+    $display->panels['main'][4] = 'new-2f9ebac7-09ae-45e2-ad02-312b90387b8b';
     $pane = new stdClass();
     $pane->pid = 'new-321e5aa2-3c17-426f-877c-8dc8cb47a104';
     $pane->panel = 'top';
@@ -511,7 +537,7 @@ function ask_panels_default_page_manager_handlers() {
     $pane->uuid = '321e5aa2-3c17-426f-877c-8dc8cb47a104';
     $display->content['new-321e5aa2-3c17-426f-877c-8dc8cb47a104'] = $pane;
     $display->panels['top'][0] = 'new-321e5aa2-3c17-426f-877c-8dc8cb47a104';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['site_template__panel_context_9a225a5d-a2cb-43e6-a8b1-3a59a879104d'] = $handler;
@@ -1006,6 +1032,130 @@ function ask_panels_default_page_manager_pages() {
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['homepage'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'partners';
+  $page->task = 'page';
+  $page->admin_title = 'Partners';
+  $page->admin_description = '';
+  $page->path = 'partners';
+  $page->access = array(
+    'logic' => 'and',
+  );
+  $page->menu = array(
+    'type' => 'none',
+    'title' => '',
+    'name' => 'navigation',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_partners__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'partners';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'panel',
+    'access' => array(
+      'logic' => 'and',
+    ),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Partners',
+    'panels_breadcrumbs_paths' => 'partners',
+    'panels_breadcrumbs_home' => 1,
+  );
+  $display = new panels_display();
+  $display->layout = 'homepage-layout';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top_region' => NULL,
+      'stats_line' => NULL,
+      'side_left' => NULL,
+      'side_right' => NULL,
+      'bottom_region' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Partners';
+  $display->uuid = '710bc608-22d6-4c54-ad7f-c709cc7613a8';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-9be47c54-61c6-47f5-a0af-8ed081360053';
+    $pane->panel = 'top_region';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'About partners',
+      'title' => '',
+      'body' => '<p>Some information about our partners goes here.</p>
+',
+      'format' => 'editor',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '9be47c54-61c6-47f5-a0af-8ed081360053';
+    $display->content['new-9be47c54-61c6-47f5-a0af-8ed081360053'] = $pane;
+    $display->panels['top_region'][0] = 'new-9be47c54-61c6-47f5-a0af-8ed081360053';
+    $pane = new stdClass();
+    $pane->pid = 'new-a25753fa-8b9b-4bbf-a2c7-b5eff40bdf0f';
+    $pane->panel = 'top_region';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'partners-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'a25753fa-8b9b-4bbf-a2c7-b5eff40bdf0f';
+    $display->content['new-a25753fa-8b9b-4bbf-a2c7-b5eff40bdf0f'] = $pane;
+    $display->panels['top_region'][1] = 'new-a25753fa-8b9b-4bbf-a2c7-b5eff40bdf0f';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-9be47c54-61c6-47f5-a0af-8ed081360053';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['partners'] = $page;
 
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */

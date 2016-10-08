@@ -14,6 +14,7 @@ features[views_view][] = following
 features[views_view][] = following_categories
 features[views_view][] = governmental_progress
 features[views_view][] = latest_updates
+features[views_view][] = partners
 features[views_view][] = q_as
 features[views_view][] = question_comments
 features[views_view][] = search

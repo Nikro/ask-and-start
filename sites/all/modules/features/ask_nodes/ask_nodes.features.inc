@@ -45,6 +45,14 @@ function ask_nodes_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'partner' => array(
+      'name' => t('Partner'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'question' => array(
       'name' => t('Question'),
       'base' => 'node_content',
