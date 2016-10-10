@@ -43,7 +43,9 @@ body {
 .pane-system-user-menu {
   ul {
     @include clearfix;
+    margin: rem(5px 20px);
     float: right;
+
     li {
       list-style: none;
       float: left;
@@ -51,6 +53,10 @@ body {
         @include font-size(small);
         text-transform: uppercase;
         text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -359,18 +365,20 @@ body {
     }
     .form-item-search-api-views-fulltext {
       @include icon(after, search) {
-        font-size: 1.5rem;
+        font-size: 3rem;
+        color: $gray;
         position: relative;
-        left: rem(-35px);
-        top: rem(5px);
+        left: rem(-70px);
+        top: rem(15px);
       }
     }
     input {
       @include font-size(normal);
       background: transparent;
       outline: none;
-      border: 2px solid $gray;
-      padding: rem(5px 10px);
+      border: 3px solid $gray;
+      padding: rem(20px) 2%;
+      width: 65%;
     }
   }
   #edit-field-q-location-wrapper {

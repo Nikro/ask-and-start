@@ -73,7 +73,8 @@
   }
 }
 
-.pane-views-exp-search-panel-pane-search {
+.pane-views-exp-search-panel-pane-search,
+.pane-announcements-panel-pane-1 {
   @include span(12 of 12 inside);
   margin: rem(20px 0);
 }

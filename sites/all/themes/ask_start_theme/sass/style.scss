@@ -31,8 +31,9 @@
 /* *************** */
 /* *** GENERAL *** */
 /* *************** */
-.pane-q-as-panel-pane-1,
-.pane-tuts-experiences-panel-pane-1,
+.pane-announcements-panel-pane-1 .pane-content,
+.pane-quicktabs-latest-updates,
+.pane-quicktabs-trending,
 .pane-views-exp-search-panel-pane-search .pane-content,
 .pane-search-panel-pane-search,
 .pane-node-content,
@@ -57,7 +58,8 @@
     @include container();
   }
 }
-.pane-views-exp-search-panel-pane-search {
+.pane-views-exp-search-panel-pane-search,
+.pane-announcements-panel-pane-1 {
   float: none;
 }
 .footer-wrapper {
