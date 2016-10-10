@@ -18,5 +18,6 @@ features[views_view][] = partners
 features[views_view][] = q_as
 features[views_view][] = question_comments
 features[views_view][] = search
+features[views_view][] = trending
 features[views_view][] = tuts_experiences
 features_exclude[dependencies][ctools] = ctools
