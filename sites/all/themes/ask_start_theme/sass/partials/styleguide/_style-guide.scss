@@ -494,14 +494,14 @@ select {
 /* ************* */
 .quicktabs-wrapper {
   ul.quicktabs-tabs {
-    padding: rem(10px 20px);
+    padding: rem(0 20px);
     margin: rem(0 0 0 -20px);
     width: 100%;
     background: $light_color;
     li {
       border-right: 1px solid $light_gray;
       padding: rem(10px 0);
-      display: inline !important;
+      display: inline-block !important;
       a {
         padding: rem(0px 15px);
         @include font-size(small, 300);
