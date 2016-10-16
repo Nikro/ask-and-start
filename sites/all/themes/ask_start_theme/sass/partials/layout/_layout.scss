@@ -105,3 +105,38 @@
     }
   }
 }
+
+.page-categories {
+  .pane-categories-panel-pane-1,
+  .pane-categories-panel-pane-2,
+  .pane-categories-panel-pane-3,
+  .pane-categories-panel-pane-4,
+  .pane-categories-panel-pane-5 {
+    padding: rem(20px);
+  }
+  @include breakpoint($desktop) {
+    .pane-page-content {
+      @include container();
+      .pane-custom.pane-1 {
+        @include span(12 of 12 inside);
+        padding: 0;
+      }
+      .pane-categories-panel-pane-1,
+      .pane-categories-panel-pane-2,
+      .pane-categories-panel-pane-3,
+      .pane-categories-panel-pane-4,
+      .pane-categories-panel-pane-5 {
+        width: 17.5%;
+        margin-right: 2.5%;
+        float: left;
+      }
+      .pane-categories-panel-pane-3 {
+        width: 20%;
+      }
+      .pane-categories-panel-pane-4,
+      .pane-categories-panel-pane-5 {
+        margin-right: 0;
+      }
+    }
+  }
+}

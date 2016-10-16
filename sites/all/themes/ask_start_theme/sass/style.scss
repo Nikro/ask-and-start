@@ -41,7 +41,13 @@
 .pane-node-comment-form,
 .pane-question-comments-panel-pane-1,
 .pane-node-field-q-status,
-.pane-governmental-progress-fsea-progress {
+.pane-governmental-progress-fsea-progress,
+.standard-white-pane,
+.pane-categories-panel-pane-1,
+.pane-categories-panel-pane-2,
+.pane-categories-panel-pane-3,
+.pane-categories-panel-pane-4,
+.pane-categories-panel-pane-5 {
   @include material-card(1);
   background: $white_neutral;
   padding: rem(20px);
@@ -52,6 +58,13 @@
     padding: 0;
     margin: rem(0 0 10px 0);
   }
+}
+.pane-categories-panel-pane-1,
+.pane-categories-panel-pane-2,
+.pane-categories-panel-pane-3,
+.pane-categories-panel-pane-4,
+.pane-categories-panel-pane-5 {
+  padding: rem(20px) 2.5%;
 }
 .page-search {
   .main-content-wrapper {
@@ -73,6 +86,11 @@
 /* ************* */
 /* Panes & Cards */
 /* ************* */
+.standard-white-pane {
+  .pane-content {
+    padding: rem(10px 20px);
+  }
+}
 
 /* ************* */
 /*     VIEWS     */
@@ -345,6 +363,87 @@
     }
   }
 }
+/* Industry */
+.view-display-id-panel_pane_1 {
+  .views-field-name {
+    a {
+      text-decoration: none;
+      margin: rem(5px 0);
+      display: inline-block;
+      color: $dark_neutral;
+      @include font-size(normal);
+      @include icon(before, domain) {
+        color: $gray;
+        margin-right: rem(8px);
+      }
+    }
+  }
+}
+/* Official Party */
+.view-display-id-panel_pane_2 {
+  .views-field-name {
+    a {
+      text-decoration: none;
+      margin: rem(5px 0);
+      display: inline-block;
+      color: $dark_neutral;
+      @include font-size(normal);
+      @include icon(before, account_balance) {
+        color: $gray;
+        margin-right: rem(8px);
+      }
+    }
+  }
+}
+/* Locations */
+.view-display-id-panel_pane_3 {
+  .views-field-name {
+    a {
+      text-decoration: none;
+      margin: rem(5px 0);
+      display: inline-block;
+      color: $dark_neutral;
+      @include font-size(normal);
+      @include icon(before, room) {
+        color: $gray;
+        margin-right: rem(8px);
+      }
+    }
+  }
+}
+/* Legal Type */
+.view-display-id-panel_pane_4 {
+  .views-field-name {
+    a {
+      text-decoration: none;
+      margin: rem(5px 0);
+      display: inline-block;
+      color: $dark_neutral;
+      @include font-size(normal);
+      @include icon(before, person) {
+        color: $gray;
+        margin-right: rem(8px);
+      }
+    }
+  }
+}
+/* Tags */
+.view-display-id-panel_pane_5 {
+  .views-field-name {
+    a {
+      text-decoration: none;
+      margin: rem(5px 0);
+      display: inline-block;
+      color: $dark_neutral;
+      @include font-size(normal);
+      @include icon(before, local_offer) {
+        color: $gray;
+        margin-right: rem(8px);
+      }
+    }
+  }
+}
+
 /* ***************************** */
 /*  CUSTOM NODE-RELATED CONTENT  */
 /* ***************************** */
