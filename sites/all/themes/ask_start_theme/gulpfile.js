@@ -53,7 +53,7 @@ gulp.task('compass', function() {
       time: true
     }))
     .pipe(prefix(["last 1 version", "> 1%", "ie 8"]))
-    //.pipe(minifyCSS())
+    .pipe(minifyCSS())
     .pipe(gulp.dest(paths.css));
 });
 

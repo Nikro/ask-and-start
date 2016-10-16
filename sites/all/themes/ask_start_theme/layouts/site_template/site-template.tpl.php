@@ -12,7 +12,7 @@
       <?php print $content['top']; ?>
     </div>
   </div>
-  <div class="branding-navigation-wrapper">
+  <div class="branding-navigation-wrapper clearfix">
     <div class="branding-navigation">
       <section class="branding-navigation__branding_left">
         <?php print $content['branding_left']; ?>

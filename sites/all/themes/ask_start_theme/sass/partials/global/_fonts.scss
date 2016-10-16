@@ -49,6 +49,7 @@ $icons: (
   queue: "\e03c",
   announcement: "\e85a",
   assignment_late: "\e85f",
+  assignment_turned_in: "\e862",
   flag: "\e153",
   attach_file: "\e226",
   attach_money: "\e227",
@@ -88,7 +89,13 @@ $icons: (
   get_app: "\e884",
   file_upload: "\e2c6",
   question_answer: "\e8af",
+  free_breakfast: "\eb44",
   goat: "\e900",
+  help: "\e887",
+  help_outline: "\e8fd",
+  import_contacts: "\e0e0",
+  linear_scale: "\e260",
+  local_florist: "\e545",
   local_offer: "\e54e",
   room: "\e8b4",
   mood_bad: "\e7f3",
@@ -101,6 +108,7 @@ $icons: (
   person: "\e7fd",
   person_add: "\e7fe",
   reply_all: "\e15f",
+  school: "\e80c",
   search: "\e8b6",
   security: "\e32a",
   sentiment_dissatisfied: "\e811",
@@ -123,8 +131,11 @@ $icons: (
   work: "\e8f9",
   zoom_in: "\e8ff",
   zoom_out: "\e901",
-  zoom_out_map: "\e56b"
+  zoom_out_map: "\e56b",
 );
+
+
+
 
 // For adding font icons to elements using CSS pseudo-elements
 // http://jaydenseric.com/blog/fun-with-sass-and-font-icons
@@ -143,7 +154,7 @@ $icons: (
       speak: none;
       font-style: normal;
       font-weight: normal;
-      font-family: 'icomoon';
+      font-family: 'icomoon' !important;
     }
     // Include any extra rules supplied for the pseudo-element
     @content;

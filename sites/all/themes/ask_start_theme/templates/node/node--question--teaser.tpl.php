@@ -110,7 +110,7 @@
       <?php print $node->comment_count; ?>
       <span class="flag-super-wrapper">
         <?php if (user_is_anonymous()): ?>
-          <?php print t('Folowers:') . $followers_count; ?>
+          <?php print $followers_count; ?>
         <?php else: ?>
           <?php print render($content['links']['flag']); ?>
           <?php print '(' . $followers_count . ')'; ?>

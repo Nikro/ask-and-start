@@ -39,7 +39,7 @@ function ask_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Body */
+  /* Field: Content: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -745,7 +745,7 @@ function ask_views_views_default_views() {
   $handler->display->display_options['fields']['field_ul_link']['label'] = '';
   $handler->display->display_options['fields']['field_ul_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ul_link']['click_sort_column'] = 'url';
-  /* Field: Content: Body */
+  /* Field: Content: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -1044,8 +1044,9 @@ function ask_views_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '70';
+  $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content statistics: Total views */
   $handler->display->display_options['fields']['totalcount']['id'] = 'totalcount';
   $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
@@ -1076,6 +1077,11 @@ function ask_views_views_default_views() {
   $handler->display->display_options['sorts']['comment_count']['table'] = 'node_comment_statistics';
   $handler->display->display_options['sorts']['comment_count']['field'] = 'comment_count';
   $handler->display->display_options['sorts']['comment_count']['order'] = 'DESC';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -1095,6 +1101,17 @@ function ask_views_views_default_views() {
 
   /* Display: Most Seen */
   $handler = $view->new_display('panel_pane', 'Most Seen', 'panel_pane_trending');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content statistics: Total views */
+  $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
+  $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
 
   /* Display: Most Discussed */
   $handler = $view->new_display('panel_pane', 'Most Discussed', 'panel_pane_discussed');

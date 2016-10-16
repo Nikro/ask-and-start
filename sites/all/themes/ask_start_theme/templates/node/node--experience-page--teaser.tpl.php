@@ -107,12 +107,14 @@
   <footer>
     <div class="comment-count-clear icon">
       <?php print $node->comment_count; ?>
-      <?php if (user_is_anonymous()): ?>
-        <?php print t('Folowers:') . $followers_count; ?>
-      <?php else: ?>
-        <?php print render($content['links']['flag']); ?>
-        <?php print '(' . $followers_count . ')'; ?>
-      <?php endif; ?>
+      <span class="flag-super-wrapper">
+        <?php if (user_is_anonymous()): ?>
+          <?php print $followers_count; ?>
+        <?php else: ?>
+          <?php print render($content['links']['flag']); ?>
+          <?php print '(' . $followers_count . ')'; ?>
+        <?php endif; ?>
+      </span>
     </div>
   </footer>
 </article>

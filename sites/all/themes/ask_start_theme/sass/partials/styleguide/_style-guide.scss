@@ -28,6 +28,7 @@ body {
   background: $white_neutral;
   position: relative;
   z-index: 10;
+  padding: rem(20px 0);
 
   @include breakpoint($desktop) {
     padding: rem(20px 0);
@@ -41,9 +42,10 @@ body {
 /* Menus and related */
 /* ***************** */
 .pane-system-user-menu {
+  @include clearfix;
   ul {
-    @include clearfix;
     margin: rem(5px 20px);
+    padding: 0;
     float: right;
 
     li {
@@ -60,23 +62,46 @@ body {
       }
     }
   }
-}
-.pane-page-logo {
-  img {
-    width: 35%;
-    height: auto;
+  @include breakpoint($desktop) {
+    ul {
+      float: right;
+      li {
+        a {
+
+        }
+      }
+    }
   }
 }
+
+
+.pane-page-logo {
+  text-align: center;
+  margin-top: rem(10px);
+  img {
+    width: 50%;
+  }
+
+  @include breakpoint($desktop) {
+    text-align: left;
+    margin-top: 0;
+    img {
+      width: 35%;
+      height: auto;
+    }
+  }
+}
+
 .pane-system-main-menu {
   position: relative;
   z-index: 10;
   ul {
-    padding: rem(10px 0 0 0);
+    padding: rem(20px 0);
     margin: 0;
-    float: right;
+    text-align: center;
+
     li {
       list-style: none;
-      float: left;
       position: relative;
       a {
         @include font-size(normal);
@@ -87,17 +112,18 @@ body {
         display: inline-block;
       }
       ul {
-        @include box-shadow(material-bottom-shadow(1));
         background: $white_neutral;
-        position: absolute;
         padding: 0;
-        display: none;
-        left: rem(-10px);
+        margin-bottom: rem(10px);
 
         li {
           margin: 0;
           padding: rem(0 10px);
-          width: rem(100px);
+
+          a {
+            @include font-size(small);
+            line-height: normal;
+          }
 
           &:hover {
             background: $light_color;
@@ -107,6 +133,32 @@ body {
       &:hover {
         ul {
           display: block;
+        }
+      }
+    }
+  }
+  @include breakpoint($desktop) {
+    ul {
+      padding: rem(10px 0 0 0);
+      float: right;
+      text-align: left;
+      li {
+        float: left;
+        a {
+
+        }
+        ul {
+          @include box-shadow(material-bottom-shadow(1));
+          display: none;
+          position: absolute;
+          left: rem(-10px);
+          margin-bottom: 0;
+          li {
+            width: rem(100px);
+            a {
+              @include font-size(normal);
+            }
+          }
         }
       }
     }
@@ -222,12 +274,25 @@ body {
     text-decoration: none;
   }
 }
+
 .flag-super-wrapper {
+  margin: rem(0 15px);
   .flag-follow {
     margin-right: 0;
     padding-right: 0;
   }
 }
+.not-logged-in {
+  .flag-super-wrapper {
+    @include icon(before, people_outline) {
+      font-size: 1.7rem;
+      position: relative;
+      top: rem(5px);
+      margin-right: rem(5px);
+    }
+  }
+}
+
 .flag-reported_comments {
   position: relative;
   top: -3px;
@@ -335,18 +400,22 @@ body {
     padding: rem(20px);
   }
 }
+.small-footers {
+  padding: rem(20px 0);
 
-.small-footer {
-  ul {
-    margin: 0;
-    padding: 0;
-    li {
+  .small-footer {
+    ul {
       margin: 0;
-      padding: 0;
-      list-style: none;
-      a {
-        text-decoration: none;
-        text-transform: uppercase;
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          display: inline-block;
+          margin: rem(5px);
+        }
       }
     }
   }
@@ -364,12 +433,14 @@ body {
       display: none;
     }
     .form-item-search-api-views-fulltext {
+      position: relative;
       @include icon(after, search) {
         font-size: 3rem;
         color: $gray;
-        position: relative;
-        left: rem(-70px);
-        top: rem(15px);
+        position: absolute;
+        right: rem(5px);
+        top: rem(10px);
+        background-color: $white_neutral;
       }
     }
     input {
@@ -378,7 +449,20 @@ body {
       outline: none;
       border: 3px solid $gray;
       padding: rem(20px) 2%;
-      width: 65%;
+      width: 95%;
+    }
+    @include breakpoint($desktop) {
+      .form-item-search-api-views-fulltext {
+        position: static;
+        @include icon(after, search) {
+          position: relative;
+          left: rem(-70px);
+          top: rem(15px)
+        }
+      }
+      input {
+        width: 65%;
+      }
     }
   }
   #edit-field-q-location-wrapper {
@@ -408,3 +492,61 @@ select {
 /* ************* */
 /* MISC ELEMENTS */
 /* ************* */
+.quicktabs-wrapper {
+  ul.quicktabs-tabs {
+    padding: rem(10px 20px);
+    margin: rem(0 0 0 -20px);
+    width: 100%;
+    background: $light_color;
+    li {
+      border-right: 1px solid $light_gray;
+      padding: rem(10px 0);
+      display: inline !important;
+      a {
+        padding: rem(0px 15px);
+        @include font-size(small, 300);
+        text-decoration: none;
+        display: inline-block;
+        line-height: normal;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &.active {
+        a {
+          font-weight: bold;
+        }
+      }
+      &.first {
+        a {
+          padding-left: 0;
+        }
+      }
+      &.last {
+        border: 0;
+        a {
+          padding-right: 0;
+        }
+      }
+      .quicktab-expand {
+        display: none;
+      }
+    }
+  }
+  @include breakpoint($desktop) {
+    ul.quicktabs-tabs {
+      li {
+        a {
+          @include font-size(normal, 300);
+          padding: rem(0px 20px);
+        }
+        &.last {
+          border-right: 1px solid $light_gray;
+          a {
+            padding-right: rem(20px);
+          }
+        }
+      }
+    }
+  }
+}

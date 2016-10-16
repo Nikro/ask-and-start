@@ -50,7 +50,7 @@
   .pane-title {
     @include font-size(big);
     padding: 0;
-    margin: 0;
+    margin: rem(0 0 10px 0);
   }
 }
 .page-search {
@@ -78,6 +78,7 @@
 /*     VIEWS     */
 /* ************* */
 .node-question,
+.node-tutorials,
 .node-experience-page {
   color: $text_color;
   a {
@@ -263,6 +264,84 @@
   .field-name-field-ul-description {
     .field-item {
       @include font-size(small, 300);
+    }
+  }
+}
+.view-announcements {
+  .views-field-title {
+    a {
+      @include font-size(big);
+      text-decoration: none;
+      color: $dark_neutral;
+    }
+  }
+  .views-field-body {
+    @include font-size(normal, 300);
+  }
+  .views-field-field-date {
+    @include font-size(small, 300);
+  }
+}
+.view-trending {
+  .view-content {
+    .views-row {
+      margin: rem(20px 0);
+
+      .views-field {
+        @include font-size(small, 300);
+        color: $dark_neutral;
+        display: inline-block;
+
+        &.views-field-counter {
+          @include font-size(normal, 400);
+        }
+        &.views-field-type {
+          .icon {
+            &.experience_page {
+              @include icon(before, free_breakfast) {
+                @include font-size(normal, 300);
+                position: relative;
+                top: 1px;
+              }
+            }
+            &.question {
+              @include icon(before, help) {
+                @include font-size(normal, 300);
+                position: relative;
+                top: 1px;
+              }
+            }
+            &.tutorials {
+              @include icon(before, school) {
+                @include font-size(normal, 300);
+                position: relative;
+                top: 1px;
+              }
+            }
+          }
+        }
+        &.views-field-title {
+          @include font-size(normal, 300);
+          a {
+            -ms-word-wrap:break-word;
+            word-wrap:break-word;
+            text-decoration: none;
+            color: $dark_neutral;
+            margin-right: rem(5px);
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        &.views-field-totalcount,
+        &.views-field-daycount,
+        &.views-field-comment-count {
+          background: $gray;
+          padding: rem(0 5px);
+          color: $light_color;
+          @include border-radius(2px);
+        }
+      }
     }
   }
 }
