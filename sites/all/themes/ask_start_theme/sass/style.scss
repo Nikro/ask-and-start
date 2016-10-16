@@ -47,7 +47,9 @@
 .pane-categories-panel-pane-2,
 .pane-categories-panel-pane-3,
 .pane-categories-panel-pane-4,
-.pane-categories-panel-pane-5 {
+.pane-categories-panel-pane-5,
+.page-user .pane-q-as-panel-pane-2,
+.page-user .pane-quicktabs-following {
   @include material-card(1);
   background: $white_neutral;
   padding: rem(20px);

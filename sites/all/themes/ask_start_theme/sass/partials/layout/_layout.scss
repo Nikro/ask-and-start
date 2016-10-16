@@ -105,7 +105,13 @@
     }
   }
 }
-
+.page-user {
+  @include breakpoint($desktop) {
+    .main-content .pane-page-content {
+      @include container();
+    }
+  }
+}
 .page-categories {
   .pane-categories-panel-pane-1,
   .pane-categories-panel-pane-2,
@@ -139,4 +145,11 @@
       }
     }
   }
+}
+.pane-page-tabs {
+  @include container();
+}
+
+.pane-page-title {
+  @include container();
 }
