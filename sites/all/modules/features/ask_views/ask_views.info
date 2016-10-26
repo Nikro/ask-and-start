@@ -10,6 +10,7 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[views_view][] = announcements
 features[views_view][] = categories
+features[views_view][] = experiences
 features[views_view][] = following
 features[views_view][] = following_categories
 features[views_view][] = governmental_progress
