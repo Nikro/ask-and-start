@@ -231,7 +231,7 @@ function ask_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'statistics_flush_accesslog_timer';
-  $strongarm->value = '259200';
+  $strongarm->value = '0';
   $export['statistics_flush_accesslog_timer'] = $strongarm;
 
   $strongarm = new stdClass();
