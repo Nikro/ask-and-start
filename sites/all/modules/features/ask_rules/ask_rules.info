@@ -1,0 +1,8 @@
+name = Ask Rules
+core = 7.x
+package = Ask Generic
+version = 7.x-1.0
+dependencies[] = entity
+dependencies[] = rules
+features[features_api][] = api:2
+features[rules_config][] = rules_user_register_notification
