@@ -16,6 +16,7 @@ features[page_manager_pages][] = categories
 features[page_manager_pages][] = homepage
 features[page_manager_pages][] = partners
 features[page_manager_pages][] = search
+features[page_manager_pages][] = tutorials
 features[variable][] = page_manager_node_view_disabled
 features[variable][] = page_manager_user_view_disabled
 features[variable][] = panels_everywhere_site_template_enabled
