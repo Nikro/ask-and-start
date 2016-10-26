@@ -919,6 +919,41 @@ function ask_panels_default_page_manager_pages() {
   $display->uuid = '0e076eb5-cb0a-4d4a-8ab6-1d075b1ea3d0';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-f48df829-dd40-4531-b4b6-151ed09274e1';
+    $pane->panel = 'top_region';
+    $pane->type = 'views';
+    $pane->subtype = 'experiences';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 1,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f48df829-dd40-4531-b4b6-151ed09274e1';
+    $display->content['new-f48df829-dd40-4531-b4b6-151ed09274e1'] = $pane;
+    $display->panels['top_region'][0] = 'new-f48df829-dd40-4531-b4b6-151ed09274e1';
   $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1235,6 +1270,104 @@ function ask_panels_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'questions';
+  $page->task = 'page';
+  $page->admin_title = 'Questions';
+  $page->admin_description = '';
+  $page->path = 'questions';
+  $page->access = array(
+    'logic' => 'and',
+  );
+  $page->menu = array(
+    'type' => 'none',
+    'title' => '',
+    'name' => 'navigation',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_questions__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'questions';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'panel',
+    'access' => array(
+      'logic' => 'and',
+    ),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Questions',
+    'panels_breadcrumbs_paths' => 'questions',
+    'panels_breadcrumbs_home' => 1,
+  );
+  $display = new panels_display();
+  $display->layout = 'homepage-layout';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top_region' => NULL,
+      'stats_line' => NULL,
+      'side_left' => NULL,
+      'side_right' => NULL,
+      'bottom_region' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '5178ef54-d95e-4bc2-9502-ef27430c4742';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-40a7d138-705f-4af0-abaa-2f81442c8cca';
+    $pane->panel = 'top_region';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'questions-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '40a7d138-705f-4af0-abaa-2f81442c8cca';
+    $display->content['new-40a7d138-705f-4af0-abaa-2f81442c8cca'] = $pane;
+    $display->panels['top_region'][0] = 'new-40a7d138-705f-4af0-abaa-2f81442c8cca';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['questions'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'search';
   $page->task = 'page';
   $page->admin_title = 'Search';
@@ -1392,6 +1525,8 @@ function ask_panels_default_page_manager_pages() {
     'panels_breadcrumbs_titles' => 'Tutorials',
     'panels_breadcrumbs_paths' => 'tutorials',
     'panels_breadcrumbs_home' => 1,
+    'panels_page_title_state' => 0,
+    'panels_page_title' => '',
   );
   $display = new panels_display();
   $display->layout = 'homepage-layout';

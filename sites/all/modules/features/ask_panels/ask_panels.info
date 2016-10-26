@@ -16,6 +16,7 @@ features[page_manager_pages][] = categories
 features[page_manager_pages][] = experiences
 features[page_manager_pages][] = homepage
 features[page_manager_pages][] = partners
+features[page_manager_pages][] = questions
 features[page_manager_pages][] = search
 features[page_manager_pages][] = tutorials
 features[variable][] = page_manager_node_view_disabled
