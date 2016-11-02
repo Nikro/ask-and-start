@@ -456,6 +456,75 @@ body {
     }
   }
 }
+form {
+  label {
+    @include font-size(normal);
+  }
+  a.button.browse {
+    @include font-size(small, 500);
+    @include border-radius(2px);
+    border: 0 none;
+    background-color: $gray;
+    color: $light_color;
+    padding: rem(10px 15px);
+    margin: rem(5px 0);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  input {
+    border: 0 none;
+    border-bottom: 1px solid $gray;
+    padding: rem(5px 7px);
+
+    &:focus {
+      outline: none;
+    }
+
+    &[type="submit"] {
+      @include font-size(small, 500);
+      @include border-radius(2px);
+      border: 0 none;
+      background-color: $gray;
+      color: $light_color;
+      padding: rem(5px 10px);
+      margin: rem(5px);
+      cursor: pointer;
+    }
+  }
+  fieldset {
+    border: 1px solid $gray;
+    @include border-radius(3px);
+    margin: rem(10px 0);
+    legend {
+      @include font-size(normal, 600);
+      color: $dark_neutral;
+      text-transform: uppercase;
+      background: $white_neutral none;
+      margin-left: rem(10px);
+    }
+    .fieldset-legend {
+      background: none !important;
+      padding: rem(0 5px 0 10px) !important;
+      a {
+        @include font-size(normal, 600);
+        text-decoration: none;
+        color: $dark_neutral;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  .description {
+    margin: rem(5px 0);
+  }
+  table {
+    width: 100%;
+    tr.odd, tr.event {
+      background: $white_neutral;
+    }
+  }
+}
 
 /* ************* */
 /* FORM ELEMENTS */

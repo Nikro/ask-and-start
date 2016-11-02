@@ -53,6 +53,8 @@
 .pane-experiences,
 .pane-questions-panel-pane-1,
 .page-user .pane-q-as-panel-pane-2,
+.node-form,
+#comments,
 .page-user .pane-quicktabs-following {
   @include material-card(1);
   background: $white_neutral;
